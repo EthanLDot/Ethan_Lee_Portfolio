@@ -12,21 +12,30 @@
         <h2>California, USA</h2>
         <h2>ethanlee2337@gmail.com</h2>
         <nav>
-            <a href="about_me.html">About Me</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="my_collection.html">Car Collection</a>
-            <a href="contact_form.html">Contact</a>
-            <a href="experiment.html">Experimental</a>
+            <a href="/about_me.html">About Me</a>
+            <a href="/portfolio.html">Portfolio</a>
+            <a href="/car_page.html">Car Talk</a>
+            <a href="/contact_form.html">Contact</a>
+            <a href="/experiment.html">Experimental</a>
         </nav>
     </header>
     <article>
         <h2>Contact Me</h2>
-        <h3>Ask me anything, or give suggestions for the website. No spam please.</h3>
+        <!-- <h3>Ask me anything, or give suggestions for the website. No spam please.</h3> -->
+        <!-- Replacing with this for the purpose of the assignment -->
+        <ol>
+            <li>No spam please.</li>
+            <li>Provide an email address in the first field. I <b>WILL</b> see this in my inbox.</li>
+            <li>Specify if you are a grade school student, college student, or recruiter/working professional. This is important as your message will be routed differently for each.</li>
+            <li>Specify your region using the dropdown</li>
+            <li>Fill out the text area with the details of your inquiry.</li>
+            <li>Specify how urgent your inquiry is.</li>
+            <li>Hit the submit button!</li>
+        </ol>
+
         <form>
             <label for="email">Email Address</label>
             <input type="email" id="email" name="email" required><br><br>
-            <label for="message">What's Up?</label>
-            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
             <fieldset>
                 <legend>Who Are You?</legend>
                 <input type="radio" id="grade_school" name="role" value="grade_school" required>
@@ -36,6 +45,27 @@
                 <input type="radio" id="professional" name="role" value="professional" required>
                 <label for="professional">Working Professional</label>
             </fieldset>
+            <label for="location">Where Are You Hailing From?</label>
+            <select name="location" id="location" size="6" required>
+                <optgroup label="USA">
+                  <option value="southern_ca">Southern California</option>
+                  <option value="northern_ca">Northern California</option>
+                  <option value="other_usa">Out of State</option>
+                </optgroup>
+                <optgroup label="International">
+                  <option value="korea">South Korea</option>
+                  <option value="taiwan">Taiwan</option>
+                  <option value="other_intl">Other Country</option>
+                </optgroup>
+            </select><br>
+            <label for="message">What's Up?</label>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+            <label for="urgency">How quickly do you need a reply?</label>
+            <select id="urgency" name="urgency" size="3" required>
+                <option value="urgent">Need immediate response</option>
+                <option value="not_urgent">Need eventual response</option>
+                <option value="no_response">No need for response</option>
+            </select>
             <input type="submit" value="Submit">
         </form>
     </article>
