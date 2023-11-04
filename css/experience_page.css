@@ -1,0 +1,95 @@
+main{
+    height: 85vh;
+    overflow: scroll;
+    background-color: #3f3f3f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container{
+    display: flex;
+    width: 80%;
+    border: 1px solid white; 
+    border-radius: 5px;
+}
+
+.container > aside{
+    width: 40%;
+}
+.container > article{
+    width: 60%;
+}
+
+aside{
+    display: flex;
+    align-items: flex-start;
+}
+
+article{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 10px;
+}
+
+figure{
+    text-align: right;
+    padding: 10px;
+}
+
+.experience-img{
+    width: 80%;
+    height: 80%;
+}
+
+button{
+    color: #aaa;
+    background-color: transparent; 
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    padding: 10px 10px 10px 0;
+}
+
+button::before {
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    animation: bounce 1s, glow 1s forwards;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-50px);
+    }
+    60% {
+        transform: translateY(-25px);
+    }
+}
+
+@keyframes glow {
+    100% {
+        color: #fff;
+    }
+}
+
+details > *{
+    margin: 0;
+}
+
+details summary{
+    cursor: pointer;
+}
+
+summary > * {
+    display: inline;
+}
+
+main > * {
+    margin: 10px;
+}

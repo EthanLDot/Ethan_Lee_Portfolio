@@ -6,14 +6,15 @@
     <meta name="description" content="Ethan Lee's Personal Website and Work. Based in California, USA.">
     <title>Ethan Lee's Website</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css" >
+    <link rel="stylesheet" href="/css/index.css" media="screen" type="text/css" >
 </head>
 <body>
-    <header>
-        <h1>Ethan Lee</h1>
-        <h2>California, USA</h2>
-        <h2>ethanlee2337@gmail.com</h2>
+    <header class="site-header">
+        <a class="header-title" href="/">
+            <h1>Ethan Lee</h1>
+        </a>
         <nav>
-            <a href="/">Home</a>
             <a href="/about_me.html">About Me</a>
             <a href="/portfolio.html">Portfolio</a>
             <a href="/car_page.html">Car Talk</a>
@@ -22,16 +23,21 @@
         </nav>
     </header>
     <main>
-        <h2>Welcome to my website.</h2>
-        <h2><strong>I make technology cool for everyone.</strong></h2>
         <picture>
             <source srcset="assets/home-page.webp" type="image/webp">
-            <img src="assets/home-page.jpg" alt="Photo of Ethan Lee in a forest"> 
+            <img class="hero-img" src="assets/home-page.jpg" alt="Photo of Ethan Lee in a forest" style="background-image:url(/assets/placeholder.png)"> 
         </picture>
-        <button>See My Portfolio</button>
+        <div class="main-text">
+            <h2>Welcome to my website.</h2>
+            <h2><strong>I make technology cool for everyone.</strong></h2>       
+            <button>See My Portfolio</button>
+        </div>
+
     </main>
     <footer>
-        <p>Made with &#9829; by Ethan himself. <a href="https://github.com/EthanLDot/Ethan_Lee_Portfolio">Original Repo</a></p>
+        <div class="footer-text">
+            <p>Made with &#9829; by Ethan himself. <a href="https://github.com/EthanLDot/Ethan_Lee_Portfolio">Original Repo</a></p>
+        </div>
     </footer>   
 </body>
 </html>

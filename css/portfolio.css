@@ -1,0 +1,29 @@
+article{
+    height: 85vh;
+    background-color: #3f3f3f;
+    overflow-y: scroll;
+}
+
+.article-title{
+    text-align: center;
+    padding: 20px;
+}
+
+.banner {
+    width: 100%;
+    max-height: 30vh;
+    object-fit: cover;
+}
+
+.banner-caption {
+    position: absolute;
+    color:#fff;
+    bottom: 15%;
+    font-size: 2rem;
+    padding-left: 2%;
+    font-weight: 700;
+}
+
+section{
+    position: relative;
+}
