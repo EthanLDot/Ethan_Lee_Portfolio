@@ -1,9 +1,14 @@
-main{
+section{
     height: 85vh;
     background-color: #3b3b3b;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+section > *{
+    margin: 10px;
 }
 
 .container{
@@ -17,25 +22,17 @@ main{
 .container > aside{
     width: 40%;
 }
+
 .container > article{
     width: 60%;
 }
 
-aside{
-    display: flex;
-    align-items: center;
-}
-
 article{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     padding: 10px;
     overflow-y: scroll;
-}
-
-article > * {
-    margin: 10px;
 }
 
 figure{
@@ -44,8 +41,7 @@ figure{
 }
 
 #aside-portrait{
-    width: 80%;
-    height: 80%;
+    width: 100%
 }
 
 button{

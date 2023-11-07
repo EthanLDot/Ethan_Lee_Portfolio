@@ -4,62 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experiences | Ethan Lee</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css" >
     <link rel="stylesheet" href="/css/experience_page.css" media="screen" type="text/css" >
 </head>
 <body>
-    <header class="site-header">
-        <a class="header-title" href="/">
-            <h1>Ethan Lee</h1>
-        </a>
-        <nav>
-            <a href="/about_me.html">About Me</a>
-            <a href="/portfolio.html">Portfolio</a>
-            <a href="/car_page.html">Car Talk</a>
-            <a href="/contact_form.html">Contact</a>
-            <a href="/experiment.html">Experimental</a>
-        </nav>
-    </header>
-    <main>
-        <h2>Experiences</h2>
-        <div class="container">
-            <aside>
-                <figure>
-                    <picture>
-                        <source srcset="../assets/coding-minds-academy.webp" type="image/webp">
-                        <img class="experience-img" src="../assets/coding-minds-academy.jpg" alt="Teacher teaching Scratch in a classroom">
-                    </picture>
-                </figure>
-            </aside>
-            <article>
-                <details>
-                    <summary>
-                        <h3>Coding Mind Academy<br>Irvine, CA<br>July 2020 - Present</h3>
-                    </summary>
-                    <div>
-                        <h4>Key Skills:</h4>
-                        <ul>
-                            <li>Python</li>
-                            <li>HTML/CSS/JS</li>
-                            <li>Java</li>
-                            <li>Lua</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <p>I joined Coding Mind Academy in July 2020 during the midst of the COVID pandemic, and have since worked with their marvelous staff to secure international clientele and teach over 50 students from different parts of the world, including the USA, England, France, China, and Japan.<br><br>
-                            I have taught students with various experience levels, from elementary schoolers to high schoolers, a wide variety of languages, including Python, Lua, Java, and the HTML/CSS/JS trio.<br><br>
-                            My goal for every student is to go far beyond teaching them how to write <code>print("Hello world!")</code> or throw a bunch of <code>&lt;div&gt;s</code> on a webpage. I want to give each student enough confidence in what they're learning to solve their own problems and build projects they can be proud of.</p>
-                    </div>
-                </details>
-            </article>
-        </div>
-        <button>Back</button>
-    </main>
-    <footer>
-        <div class="footer-text">
-            <p>Made with &#9829; by Ethan himself. <a href="https://github.com/EthanLDot/Ethan_Lee_Portfolio">Original Repo</a></p>
-        </div>
-    </footer>    
+    <div class="site-container">
+        <header class="site-header">
+            <a class="header-title" href="/">
+                <h1>Ethan Lee</h1>
+            </a>
+            <input id="menu-toggle" type="checkbox">
+            <label class='menu-button-container' for="menu-toggle">
+                <span class='menu-button'></span>
+            </label>
+            <nav>
+                <a href="/about_me.html">About Me</a>
+                <a href="/portfolio.html">Portfolio</a>
+                <a href="/car_page.html">Car Talk</a>
+                <a href="/contact_form.html">Contact</a>
+                <a href="/experiment.html">Experimental</a>
+            </nav>
+        </header>
+        <section>
+            <h2>Experiences</h2>
+            <div class="container">
+                <aside>
+                    <figure>
+                        <picture>
+                            <source srcset="../assets/coding-minds-academy.webp" type="image/webp">
+                            <img class="experience-img" src="../assets/coding-minds-academy.jpg" alt="Teacher teaching Scratch in a classroom" width="80%">
+                        </picture>
+                    </figure>
+                </aside>
+                <article>
+                    <details>
+                        <summary>
+                            <h3>Coding Mind Academy<br>Irvine, CA<br>July 2020 - Present</h3>
+                        </summary>
+                        <div>
+                            <h4>Key Skills:</h4>
+                            <ul>
+                                <li>Python</li>
+                                <li>HTML/CSS/JS</li>
+                                <li>Java</li>
+                                <li>Lua</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p>I joined Coding Mind Academy in July 2020 during the midst of the COVID pandemic, and have since worked with their marvelous staff to secure international clientele and teach over 50 students from different parts of the world, including the USA, England, France, China, and Japan.<br><br>
+                                I have taught students with various experience levels, from elementary schoolers to high schoolers, a wide variety of languages, including Python, Lua, Java, and the HTML/CSS/JS trio.<br><br>
+                                My goal for every student is to go far beyond teaching them how to write <code>print("Hello world!")</code> or throw a bunch of <code>&lt;div&gt;s</code> on a webpage. I want to give each student enough confidence in what they're learning to solve their own problems and build projects they can be proud of.</p>
+                        </div>
+                    </details>
+                </article>
+            </div>
+            <button>Back</button>
+        </section>
+        <footer>
+            <div class="footer-text">
+                <p>Made with &#9829; by Ethan himself. <a href="https://github.com/EthanLDot/Ethan_Lee_Portfolio">Original Repo</a></p>
+            </div>
+        </footer>    
+    </div>
 </body>
 </html>

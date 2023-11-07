@@ -12,7 +12,7 @@
 
 .hero-img {
     width: 100%;
-    height: 85vh;
+    height: 80vh;
     object-fit: cover;
 }
 
@@ -24,8 +24,7 @@ button{
     padding: 50px;
 }
 
-button::before {
-    transform: scale(0);
+button::before{
     transition: all 0.3s ease;
 }
 
@@ -48,5 +47,11 @@ button:hover {
 @keyframes glow {
     100% {
         color: #fff;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-text, button {
+        font-size: 1rem;
     }
 }

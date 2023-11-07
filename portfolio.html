@@ -15,46 +15,52 @@
     </style>
 </head>
 <body>
-    <header class="site-header">
-        <a class="header-title" href="/">
-            <h1>Ethan Lee</h1>
-        </a>
-        <nav>
-            <a href="/about_me.html">About Me</a>
-            <a href="/portfolio.html">Portfolio</a>
-            <a href="/car_page.html">Car Talk</a>
-            <a href="/contact_form.html">Contact</a>
-            <a href="/experiment.html">Experimental</a>
-        </nav>
-    </header>
-    <article>
-        <h2 class="article-title">My Portfolio</h2>
+    <div class="site-container">
+        <header class="site-header">
+            <a class="header-title" href="/">
+                <h1>Ethan Lee</h1>
+            </a>
+            <input id="menu-toggle" type="checkbox">
+            <label class='menu-button-container' for="menu-toggle">
+                <span class='menu-button'></span>
+            </label>
+            <nav>
+                <a href="/about_me.html">About Me</a>
+                <a href="/portfolio.html">Portfolio</a>
+                <a href="/car_page.html">Car Talk</a>
+                <a href="/contact_form.html">Contact</a>
+                <a href="/experiment.html">Experimental</a>
+            </nav>
+        </header>
         <section>
-            <picture>
-                <source srcset="assets/anheuser_busch.webp" type="image/webp" width="500" height="250">
-                <img class="banner" src="assets/anheuser_busch.jpg" alt="image of Anheuser-Busch St. Louis Office">
-            </picture>
-            <a href="portfolio/experiences.html"><h3 class="banner-caption">Experiences</h3></a>
+            <h2 class="section-title">My Portfolio</h2>
+            <article>
+                <picture>
+                    <source srcset="assets/anheuser_busch.webp" type="image/webp" width="500" height="250">
+                    <img class="banner" src="assets/anheuser_busch.jpg" alt="image of Anheuser-Busch St. Louis Office">
+                </picture>
+                <a href="portfolio/experiences.html"><h3 class="banner-caption">Experiences</h3></a>
+            </article>
+            <article>
+                <picture>
+                    <source srcset="assets/ucsd.webp" type="image/webp" width="500" height="250">
+                    <img class="banner" src="assets/ucsd.jpg" alt="Image of UC San Diego Campus">
+                </picture>
+                <a href="portfolio/education.html"><h3 class="banner-caption">Education</h3></a>
+            </article>
+            <article>
+                <picture>
+                    <source srcset="assets/office.webp" type="image/webp" width="500" height="250">
+                    <img class="banner" src="assets/office.jpg" alt="Small office good for doing coding projects">
+                </picture>
+                <a href="portfolio/projects.html"><h3 class="banner-caption">Projects</h3></a>
+            </article>
         </section>
-        <section>
-            <picture>
-                <source srcset="assets/ucsd.webp" type="image/webp" width="500" height="250">
-                <img class="banner" src="assets/ucsd.jpg" alt="Image of UC San Diego Campus">
-            </picture>
-            <a href="portfolio/education.html"><h3 class="banner-caption">Education</h3></a>
-        </section>
-        <section>
-            <picture>
-                <source srcset="assets/office.webp" type="image/webp" width="500" height="250">
-                <img class="banner" src="assets/office.jpg" alt="Small office good for doing coding projects">
-            </picture>
-            <a href="portfolio/projects.html"><h3 class="banner-caption">Projects</h3></a>
-        </section>
-    </article>
-    <footer>
-        <div class="footer-text">
-            <p>Made with &#9829; by Ethan himself. <a href="https://github.com/EthanLDot/Ethan_Lee_Portfolio">Original Repo</a></p>
-        </div>
-    </footer>      
+        <footer>
+            <div class="footer-text">
+                <p>Made with &#9829; by Ethan himself. <a href="https://github.com/EthanLDot/Ethan_Lee_Portfolio">Original Repo</a></p>
+            </div>
+        </footer>     
+    </div>
 </body>
 </html>
