@@ -12,18 +12,42 @@ section{
 .banner {
     width: 100%;
     height: 250px;
-    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+}
+
+#experience-banner{
+    background-image: url(/assets/anheuser_busch.jpg);
+}
+
+#education-banner{
+    background-image: url(/assets/ucsd.jpg);
+}
+
+#projects-banner{
+    background-image: url(/assets/office.jpg);
 }
 
 .banner-caption {
-    position: absolute;
     color:#fff;
-    bottom: 15%;
     font-size: 2rem;
-    padding-left: 2%;
     font-weight: 700;
+    padding: 1%;
 }
 
-article{
-    position: relative;
+section > a{
+    text-decoration: none;
+}
+
+@media (max-width: 480px) {
+    .banner{
+        align-items: center;
+        justify-content: center;
+    }
+    .banner-caption {
+        font-size: 1.5rem;
+    }
+
 }

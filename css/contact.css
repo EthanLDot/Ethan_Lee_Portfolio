@@ -86,7 +86,22 @@ input[type="email"], textarea{
         margin-bottom: 10px;
     }
 
-    /* Style the button on hover */
-    input[type=submit]:hover {
-        background-color: #006400;
+/* Style the button on hover */
+input[type=submit]:hover {
+    background-color: #006400;
+}
+
+@media(max-width: 480px){
+    section *, article  *{
+        font-size: 0.75rem;
     }
+
+    hr{
+        width: 100%;
+    }
+
+    ul, form{
+        width: 100%;
+    }
+  }
+

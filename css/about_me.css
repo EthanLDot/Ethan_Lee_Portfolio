@@ -79,3 +79,29 @@ button:hover {
         color: #fff;
     }
 }
+
+@media (max-width: 480px) {
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container{
+        width: 100%;
+    }
+
+    #aside-portrait{
+        width: 150px;
+    }
+    
+    .container > article{
+        margin-top: 20px;
+        width: 90%;
+    }
+    
+    figure{
+        text-align: center;
+        padding: 0px;
+        font-size: 0.5rem;
+    }
+}
