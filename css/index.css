@@ -22,7 +22,7 @@ section{
 }
 
 
-button{
+.main-text > button{
     color: var(--text-unfocused);
     background-color: transparent; 
     cursor: pointer;
@@ -30,11 +30,11 @@ button{
     padding: 50px;
 }
 
-button::before{
+.main-text > button::before{
     transition: all 0.3s ease;
 }
 
-button:hover {
+.main-text > button:hover {
     animation: bounce 1s, glow 1s forwards;
 }
 
@@ -57,10 +57,10 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-    .main-text, button {
+    .main-text, .main-text > button {
         font-size: 1rem;
     }
-    button{
+    .main-text > button{
         padding: 10px 25px 10px 25px;
     }
 }

@@ -55,6 +55,24 @@
           url('/assets/fonts/montserrat-v26-latin-700italic.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-50px);
+  }
+  60% {
+      transform: translateY(-25px);
+  }
+}
+
+@keyframes glow {
+  100% {
+      color: var(--text-focused);
+  }
+}
+
 .site-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -67,6 +85,8 @@
 
 section { 
   grid-area: 2 / 1 / 10 / 2; 
+  height: 80vh;
+  background-color: var(--std-background-color);
 }
 
 footer { 
@@ -223,3 +243,409 @@ nav {
     width: 100%;
   }
 }
+
+/*for index.html*/
+
+.main-text {
+  position: absolute;
+  text-align: center;
+  top: 45vh;
+  width: 100%;
+  color: var(--text-color);
+}
+
+.main-text, .main-text > button {
+  font-size: 1.5rem;
+}
+
+.hero-img {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+
+.main-text > button{
+  color: var(--text-unfocused);
+  background-color: transparent; 
+  cursor: pointer;
+  border: none;
+  padding: 50px;
+}
+
+.main-text > button::before{
+  transition: all 0.3s ease;
+}
+
+.main-text > button:hover {
+  animation: bounce 1s, glow 1s forwards;
+}
+
+@media (max-width: 768px) {
+  .main-text, .main-text > button {
+      font-size: 1rem;
+  }
+  .main-text > button{
+      padding: 10px 25px 10px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-img {
+      object-position: 40% 50%;
+  }
+}
+
+
+/* for aboutme.html */
+#about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#about-me > *{
+  margin: 10px;
+}
+
+#about-me > .container{
+  display: flex;
+  width: 80%;
+  height: 80%;
+  border: 1px solid white; 
+  border-radius: 5px;
+}
+
+.container > aside{
+  width: 40%;
+}
+
+.container > article{
+  width: 60%;
+}
+
+@media (max-width: 480px) {
+  .container > aside{
+    width: fit-content;
+  }
+}
+
+figure{
+  text-align: right;
+  padding: 10px;
+  font-size: 0.75rem;
+}
+
+figure:has(figcaption) > * {
+  color: black;
+}
+
+figure:has(figcaption) {
+  background: white;
+  text-align: center;
+  width: 100%;
+}
+
+#aside-portrait{
+  width: 100%;
+  height: 100%;
+}
+
+button{
+  color: var(--text-unfocused);
+  background-color: transparent; 
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  padding: 10px 10px 10px 0;
+}
+
+button::before {
+  transform: scale(0);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  animation: bounce 1s, glow 1s forwards;
+}
+
+@media (max-width: 480px) {
+  .container{
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .container{
+      width: 100%;
+  }
+
+  #aside-portrait{
+      width: 150px;
+  }
+  
+  .container > article{
+      margin-top: 20px;
+      width: 90%;
+  }
+  
+  figure{
+      text-align: center;
+      padding: 0px;
+      font-size: 0.5rem;
+  }
+}
+
+/*from portfolio.css*/
+
+#portfolio{
+  overflow-y: scroll;
+}
+
+.section-title{
+  text-align: center;
+  padding: 10px;
+}
+
+.banner {
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#experience-banner{
+  background-image: url(/assets/anheuser_busch.jpg), url(/assets/anheuser_busch_lowres.jpg);
+  /* Source : Image by John W. Iwanski via Flickr, licensed under ("https://creativecommons.org/licenses/by-nc/2.0/") CC BY-NC 2.0 */
+}
+
+#education-banner{
+  background-image: url(/assets/ucsd.jpg), url(/assets/ucsd_lowres.jpg);
+  /* source: personal image */
+
+}
+
+#projects-banner{
+  background-image: url(/assets/office.jpg), url(/assets/office_lowres.jpg);
+  /* source: AI generated image */
+}
+
+.banner-caption {
+  color:var(--text-color);
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 1%;
+}
+
+#portfolio > a{
+  text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  .banner{
+      align-items: center;
+      justify-content: center;
+  }
+  .banner-caption {
+      font-size: 1.5rem;
+  }
+
+}
+
+/*for all pages in portfolio folder*/
+.experience{
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.container{
+  display: flex;
+  width: 80%;
+  border: 1px solid white; 
+  border-radius: 5px;
+}
+
+aside{
+  display: flex;
+  align-items: flex-start;
+}
+
+article{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.experience-article{
+  overflow-y: scroll;
+}
+
+figure{
+  text-align: right;
+  padding: 10px;
+  font-size: 0.75rem;
+}
+
+details > *{
+  margin: 0;
+}
+
+details summary{
+  cursor: pointer;
+}
+
+summary > * {
+  display: inline;
+}
+
+img{
+  width: 80%;
+  height: 100%;
+}
+
+
+@media (max-width: 480px) {
+  .container{
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+  }
+  
+  .container > article{
+      margin-top: 0;
+      width: 90%;
+  }
+
+  figure{
+      text-align: center;
+      padding: 0;
+  }
+
+  article > * {
+      font-size: 0.75rem;
+  }
+
+}
+
+/* from contact form html */
+#contact-page{
+  overflow-y: scroll;
+  text-align: center;
+  & ul{
+    width: 50%;
+    list-style-type: none;
+    padding-inline: 0;
+  }
+  
+   & ul > * {
+    margin: 5px;
+  }
+
+  & article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  & hr{
+    width: 50%;
+    margin: auto;
+  }
+}
+
+#contact-page > *, article > * {
+  margin: 10px 0;
+}
+
+.icon{
+  width: 50px;
+  height: 50px;
+}
+
+.contact-icons > a{
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  margin: 25px;
+}
+
+form{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form > * {
+  margin: 10px;
+}
+
+fieldset, textarea{
+  width: 80%;
+}
+
+input[type="email"], input[type="text"]
+{
+  width: 80%;
+}
+
+input[type="email"], textarea{
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #000;
+  caret-color: #000;
+}
+
+fieldset > label {
+  display: block;
+}
+
+option{
+  color: #000;
+}
+
+input[type=submit] {
+      background-color: #333;
+      color: var(--text-color);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 10px;
+      
+  }
+
+/* Style the button on hover */
+input[type=submit]:hover {
+  transition: background-color 0.3s ease;
+  background-color: color(display-p3 0.484 0.806 0.385 / 0.5)
+}
+
+@media(max-width: 480px){
+  #contact-page{
+      font-size: 0.75rem;
+  }
+
+  #contact-page > hr{
+    width: 100%;
+  }
+
+  #contact-page > article > *{
+    width: 100%;
+  }
+}
+

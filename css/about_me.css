@@ -54,7 +54,7 @@ figure:has(figcaption) > * {
     height: 100%;
 }
 
-button{
+article > button{
     color: var(--text-unfocused);
     background-color: transparent; 
     cursor: pointer;
@@ -63,12 +63,12 @@ button{
     padding: 10px 10px 10px 0;
 }
 
-button::before {
+article > button::before {
     transform: scale(0);
     transition: all 0.3s ease;
 }
 
-button:hover {
+article > button:hover {
     animation: bounce 1s, glow 1s forwards;
 }
 
