@@ -4,56 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Ethan Lee</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css" >
 </head>
 <body>
-    <header>
-        <h1>Ethan Lee</h1>
-        <h2>California, USA</h2>
-        <h2>ethanlee2337@gmail.com</h2>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/about_me.html">About Me</a>
-            <a href="/portfolio.html">Portfolio</a>
-            <a href="/car_page.html">Car Talk</a>
-            <a href="/contact_form.html">Contact</a>
-            <a href="/experiment.html">Experimental</a>
-        </nav>
-    </header>
-    <article>
-        <h2>Projects</h2>
-        <section>
-            <figure>
-                <picture>
-                    <source srcset="../assets/portfolio-profile.webp" type="image/webp">
-                    <img src="../assets/portfolio-profile.jpg" alt="profile picture of Ethan Lee">
-                </picture>
-            </figure>
-            <details>
-                <summary>
-                    <h3>Personal Portfolio<br>September 2023 - Present</h3>
-                </summary>
-                <div>
-                    <h4>Key Skills:</h4>
-                    <ul>
-                       <li>HTML/CSS/JS</li>
-                       <li>React</li>
-                       <li>Figma</li>
-                    </ul>
-               </div>
-                <p>I initially took an unorthodox, design-based approach by wireframing and building the site's user interface using Figma, and then using the Locofy AI-based tool to convert the existing interface into React.</p>
+    <div class="site-container">
+        <header class="site-header">
+            <a class="header-title" href="/">
+                <h1>Ethan Lee</h1>
+            </a>
+            <input id="menu-toggle" type="checkbox">
+            <label class='menu-button-container' for="menu-toggle">
+                <span class='menu-button'></span>
+            </label>
+            <nav>
+                <a href="/about_me.html">About Me</a>
+                <a href="/portfolio.html">Portfolio</a>
+                <a href="/contact_form.html">Contact</a>
+            </nav>
+        </header>
+        <section class="experience">
+            <h2>Projects</h2>
+            <div class="container">
                 <aside>
-                    <p>Locofy specializes in using AI to automate conversion of Figma designs into working front-end code, promising faster development at the expense of some control over the page structure. You can learn more <a href="https://www.locofy.ai/">here.</a></p>
+                    <figure>
+                        <picture>
+                            <source srcset="../assets/portfolio_profile.avif" type="image/avif" media="(min-width: 480px)">
+                            <source srcset="../assets/portfolio_profile.webp" type="image/webp" media="(min-width: 480px)">
+                            <source srcset="../assets/portfolio_profile_lowres.webp" type="image/webp" media="(max-width: 480px)">
+                            <source srcset="../assets/portfolio_profile.jpg" type="images/jpeg" media="(min-width: 480px)">
+                            <img class="experience-img" src="../assets/portfolio_profile_lowres.jpg" alt="profile picture of Ethan Lee" width="300" height="100">
+                            <!-- source: personal image -->
+                        </picture>
+                    </figure>
                 </aside>
-                <br>While there was not a lot of tweaking involved to get the interface working the way I expected, I realized that in the context of a portfolio, where the majority of content would be static, this was an overkill approach that added unneeded complexity and website's performance, readability, and SEO.
-                <hr>
-                As part of a course on web client languages, I was tasked with rebuilding the website with this knowledge in mind. I am using HTML, CSS, and Javascript (again), but with a greater focus on optimizing performance and accessibility through semantically correct HTML and reducing asset sizes.
-            </details>
+                <article>
+                    <details>
+                        <summary>
+                            <h3>Personal Portfolio<br>September 2023 - Present</h3>
+                        </summary>
+                        <div>
+                            <h4>Key Skills:</h4>
+                            <ul>
+                               <li>HTML/CSS/JS</li>
+                               <li>React</li>
+                               <li>Figma</li>
+                            </ul>
+                       </div>
+                        <p>I initially took an unorthodox, design-based approach by wireframing and building the site's user interface using Figma, and then using the Locofy AI-based tool to convert the existing interface into React.</p><br>
+                        <p>Locofy specializes in using AI to automate conversion of Figma designs into working front-end code, promising faster development at the expense of some control over the page structure. You can learn more <a href="https://www.locofy.ai/">here.</a></p><br>
+                        While there was not a lot of tweaking involved to get the interface working the way I expected, I realized that in the context of a portfolio, where the majority of content would be static, this was an overkill approach that added unneeded complexity and website's performance, readability, and SEO.
+                        As part of a course on web client languages, I was tasked with rebuilding the website with this knowledge in mind. I am using HTML, CSS, and Javascript (again), but with a greater focus on optimizing performance and accessibility through semantically correct HTML and reducing asset sizes.
+                    </details>
+                </article>
+            </div>
+            <button>Back</button>
         </section>
-        <button>Back</button>
-    </article>
-    <footer>
-        <p>Made with &#9829; by Ethan himself. <a href="https://github.com/EthanLDot/Ethan_Lee_Portfolio">Original Repo</a></p>
-    </footer>   
+        <footer>
+            <div class="footer-text">
+                <p>Made with &#9829; by Ethan himself. <a href="https://github.com/EthanLDot/Ethan_Lee_Portfolio">Original Repo</a></p>
+            </div>
+        </footer>    
+    </div>
 </body>
 </html>

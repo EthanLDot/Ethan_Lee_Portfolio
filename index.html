@@ -6,32 +6,44 @@
     <meta name="description" content="Ethan Lee's Personal Website and Work. Based in California, USA.">
     <title>Ethan Lee's Website</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css" >
 </head>
 <body>
-    <header>
-        <h1>Ethan Lee</h1>
-        <h2>California, USA</h2>
-        <h2>ethanlee2337@gmail.com</h2>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/about_me.html">About Me</a>
-            <a href="/portfolio.html">Portfolio</a>
-            <a href="/car_page.html">Car Talk</a>
-            <a href="/contact_form.html">Contact</a>
-            <a href="/experiment.html">Experimental</a>
-        </nav>
-    </header>
-    <main>
-        <h2>Welcome to my website.</h2>
-        <h2><strong>I make technology cool for everyone.</strong></h2>
-        <picture>
-            <source srcset="assets/home-page.webp" type="image/webp">
-            <img src="assets/home-page.jpg" alt="Photo of Ethan Lee in a forest"> 
-        </picture>
-        <button>See My Portfolio</button>
-    </main>
-    <footer>
-        <p>Made with &#9829; by Ethan himself. <a href="https://github.com/EthanLDot/Ethan_Lee_Portfolio">Original Repo</a></p>
-    </footer>   
+    <div class="site-container">
+        <header class="site-header">
+            <a class="header-title" href="/">
+                <h1>Ethan Lee</h1>
+            </a>
+            <input id="menu-toggle" type="checkbox">
+            <label class='menu-button-container' for="menu-toggle">
+                <span class='menu-button'></span>
+            </label>
+            <nav>
+                <a href="/about_me.html">About Me</a>
+                <a href="/portfolio.html">Portfolio</a>
+                <a href="/contact_form.html">Contact</a>
+            </nav>
+        </header>
+        <section>
+            <picture>
+                <source srcset="assets/home_page.avif" type="image/avif" media="(min-width: 480px)">
+                <source srcset="assets/home_page.webp" type="image/webp" media="(min-width: 480px)">
+                <source srcset="assets/home_page_lowres.webp" type="image/webp" media="(max-width: 480px)">
+                <source srcset="assets/home_page.jpg" type="images/jpeg" media="(min-width: 480px)">
+                <img class="hero-img" src="assets/home_page_lowres.jpg" alt="Photo of Ethan Lee in a forest" style="background-image:url(/assets/placeholder.png)" width="300" height="100">
+                <!-- source: personal image -->
+            </picture>
+            <div class="main-text">
+                <h2>Welcome to my website.</h2>
+                <h2><strong>I make technology cool for everyone.</strong></h2>     
+                <button>See My Portfolio</button>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-text">
+                <p>Made with &#9829; by Ethan himself. <a href="https://github.com/EthanLDot/Ethan_Lee_Portfolio">Original Repo</a></p>
+            </div>
+        </footer>   
+    </div>
 </body>
 </html>

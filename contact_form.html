@@ -6,73 +6,93 @@
     <title>Contact Ethan Lee</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <meta name="description" content="Reach out to Ethan Lee, based in California, USA.">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css" >
 </head>
 <body>
-    <header>
-        <h1>Ethan Lee</h1>
-        <h2>California, USA</h2>
-        <h2>ethanlee2337@gmail.com</h2>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/about_me.html">About Me</a>
-            <a href="/portfolio.html">Portfolio</a>
-            <a href="/car_page.html">Car Talk</a>
-            <a href="/contact_form.html">Contact</a>
-            <a href="/experiment.html">Experimental</a>
-        </nav>
-    </header>
-    <article>
-        <h2>Contact Me</h2>
-        <!-- <h3>Ask me anything, or give suggestions for the website. No spam please.</h3> -->
-        <!-- Replacing with this for the purpose of the assignment -->
-        <ol>
-            <li>No spam please.</li>
-            <li>Provide an email address in the first field. I <b>WILL</b> see this in my inbox.</li>
-            <li>Specify if you are a grade school student, college student, or recruiter/working professional. This is important as your message will be routed differently for each.</li>
-            <li>Specify your region using the dropdown</li>
-            <li>Fill out the text area with the details of your inquiry.</li>
-            <li>Specify how urgent your inquiry is.</li>
-            <li>Hit the submit button!</li>
-        </ol>
-
-        <form>
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required><br><br>
-            <fieldset>
-                <legend>Who Are You?</legend>
-                <input type="radio" id="grade_school" name="role" value="grade_school" required>
-                <label for="grade_school">Grade School Student</label>
-                <input type="radio" id="college" name="role" value="college" required>
-                <label for="college">College Student</label>
-                <input type="radio" id="professional" name="role" value="professional" required>
-                <label for="professional">Working Professional</label>
-            </fieldset>
-            <label for="location">Where Are You Hailing From?</label>
-            <select name="location" id="location" size="6" required>
-                <optgroup label="USA">
-                  <option value="southern_ca">Southern California</option>
-                  <option value="northern_ca">Northern California</option>
-                  <option value="other_usa">Out of State</option>
-                </optgroup>
-                <optgroup label="International">
-                  <option value="korea">South Korea</option>
-                  <option value="taiwan">Taiwan</option>
-                  <option value="other_intl">Other Country</option>
-                </optgroup>
-            </select><br>
-            <label for="message">What's Up?</label>
-            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-            <label for="urgency">How quickly do you need a reply?</label>
-            <select id="urgency" name="urgency" size="3" required>
-                <option value="urgent">Need immediate response</option>
-                <option value="not_urgent">Need eventual response</option>
-                <option value="no_response">No need for response</option>
-            </select>
-            <input type="submit" value="Submit">
-        </form>
-    </article>
-    <footer>
-        <p>Made with &#9829; by Ethan himself. <a href="https://github.com/EthanLDot/Ethan_Lee_Portfolio">Original Repo</a></p>
-    </footer>   
+    <div class="site-container">
+        <header class="site-header">
+            <a class="header-title" href="/">
+                <h1>Ethan Lee</h1>
+            </a>
+            <input id="menu-toggle" type="checkbox">
+            <label class='menu-button-container' for="menu-toggle">
+                <span class='menu-button'></span>
+            </label>
+            <nav>
+                <a href="/about_me.html">About Me</a>
+                <a href="/portfolio.html">Portfolio</a>
+                <a href="/contact_form.html">Contact</a>
+            </nav>
+        </header>
+        <section id="contact-page">
+            <h2>Reach Out to Me!</h2>
+            <hr>
+            <article>
+                <h3>Emails/Socials</h3>
+                <p>ethanlee2337@gmail.com</p>
+                <div class="contact-icons">
+                    <a href="https://www.linkedin.com/in/real-ethan-lee/">
+                        <img src="/assets/in-white.png" alt="LinkedIn" class="icon">
+                    </a>
+                    <a href="https://github.com/EthanLDot">
+                        <img src="/assets/github-white.png" alt="GitHub" class="icon">
+                    </a>
+                </div> 
+            </article>
+            <hr>
+            <article>
+                <h3>Contact Form</h3>
+                <ul>
+                    <li>No spam please.</li>
+                    <li>Provide an email address in the first field.
+                    <li>Specify if you are a grade school student, college student, or recruiter/working professional.
+                    <li>Specify how urgent your inquiry is.</li>
+                </ul>
+        
+                <form>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                    <fieldset>
+                        <legend>Who Are You?</legend>
+                        <label for="grade_school">
+                            <input type="radio" id="grade_school" name="role" value="grade_school" required>
+                            Grade School Student
+                        </label>
+                        <label for="college">
+                            <input type="radio" id="college" name="role" value="college" required>
+                            College Student
+                        </label>
+                        <label for="professional">
+                            <input type="radio" id="professional" name="role" value="professional" required>
+                            Working Professional
+                        </label>
+                    </fieldset>
+                    <label for="message">What's Up?</label>
+                    <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+                    <fieldset>
+                        <legend>How Quickly Do You Need a Reply?</legend>
+                        <label for="urgent">
+                            <input type="radio" id="urgent" name="urgency" value="urgent" required>
+                            Urgent
+                        </label>
+                        <label for="not_urgent">
+                            <input type="radio" id="not_urgent" name="urgency" value="not_urgent" required>
+                            Not Urgent
+                        </label>
+                        <label for="no_response">
+                            <input type="radio" id="no_response" name="urgency" value="no_response" required>
+                            No Need for Reply
+                        </label>
+                    </fieldset>
+                    <input type="submit" value="Submit">
+                </form>
+            </article>        
+        </section>
+        <footer>
+            <div class="footer-text">
+                <p>Made with &#9829; by Ethan himself. <a href="https://github.com/EthanLDot/Ethan_Lee_Portfolio">Original Repo</a></p>
+            </div>
+        </footer>  
+    </div>
 </body>
 </html>

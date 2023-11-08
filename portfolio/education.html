@@ -4,58 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Education | Ethan Lee</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css" >
 </head>
 <body>
-    <header>
-        <h1>Ethan Lee</h1>
-        <h2>California, USA</h2>
-        <h2>ethanlee2337@gmail.com</h2>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/about_me.html">About Me</a>
-            <a href="/portfolio.html">Portfolio</a>
-            <a href="/car_page.html">Car Talk</a>
-            <a href="/contact_form.html">Contact</a>
-            <a href="/experiment.html">Experimental</a>
-        </nav>
-    </header>
-    <article>
-        <h2>Education</h2>
-        <section>
-            <figure>
-                <picture>
-                    <source srcset="../assets/nseoultower.webp" type="image/webp">
-                    <img src="../assets/nseoultower.jpg" alt="Ethan at a balcony overlooking Seoul">
-                </picture>
-            </figure>
-            <details>
-                <summary>
-                    <h3>Yonsei University<br>Seoul, South Korea<br>August 2022 - December 2022</h3>
-                </summary>
-                <div>
-                    <h4>Key Courses:</h4>
-                    <ul>
-                       <li>Korean (Beginner)</li>
-                       <li>Intro to Artificial Intelligence</li>
-                    </ul>
-                    <h4>Clubs/Organizations:</h4>
-                    <ul>
-                       <li>Yonsei Taekwondo (International Student Division)</li>
-                    </ul>
-               </div>
-                <div>
-                    <p>Under the UC Education Abroad Program I had the privilege of being able to study in Yonsei University as an international student.<br>
-                        While studying abroad, I also joined Yonsei Taekwondo's international student division and was able to obtain an orange belt by December 2022.<br>
-                        I also joined an expat church and was able to not only learn more about Korean life and culture, but also better understand the challenges involved in living and working long-term in a new country. <br>
-                        This experience may have been short, but it shaped me into someone more willing to make mistakes, more ambitious in my goals, and more open to listening to others' experiences.</p>
-                </div>
-            </details>
+    <div class="site-container">
+        <header class="site-header">
+            <a class="header-title" href="/">
+                <h1>Ethan Lee</h1>
+            </a>
+            <input id="menu-toggle" type="checkbox">
+            <label class='menu-button-container' for="menu-toggle">
+                <span class='menu-button'></span>
+            </label>
+            <nav>
+                <a href="/about_me.html">About Me</a>
+                <a href="/portfolio.html">Portfolio</a>
+                <a href="/contact_form.html">Contact</a>
+            </nav>
+        </header>
+        <section class="experience">
+            <h2>Education</h2>
+            <div class="container">
+                <aside>
+                    <figure>
+                        <picture>
+                            <source srcset="../assets/nseoultower.avif" type="image/avif" media="(min-width: 480px)">
+                            <source srcset="../assets/nseoultower.webp" type="image/webp" media="(min-width: 480px)">
+                            <source srcset="../assets/nseoultower_lowres.webp" type="image/webp" media="(max-width: 480px)">
+                            <source srcset="../assets/nseoultower.jpg" type="images/jpeg" media="(min-width: 480px)">
+                            <img class="experience-img" src="../assets/nseoultower_lowres.jpg" alt="Ethan at a balcony overlooking Seoul" width="300" height="100">
+                            <!-- source: personal image -->
+                        </picture>
+                        <figcaption>Me at N Seoul Tower at sunset, September 2022.</figcaption>
+                    </figure>
+                </aside>
+                <article>
+                    <details>
+                        <summary>
+                            <h3>Yonsei University<br>Seoul, South Korea<br>August 2022 - December 2022</h3>
+                        </summary>
+                        <div>
+                            <h4>Key Courses:</h4>
+                            <ul>
+                               <li>Korean (Beginner)</li>
+                               <li>Intro to Artificial Intelligence</li>
+                            </ul>
+                            <h4>Clubs/Organizations:</h4>
+                            <ul>
+                               <li>Yonsei Taekwondo (International Student Division)</li>
+                            </ul>
+                       </div>
+                        <div>
+                            <p>Under the UC Education Abroad Program I had the privilege of being able to study in Yonsei University as an international student.</p><br>
+                               <p>While studying abroad, I also joined Yonsei Taekwondo's international student division and was able to obtain an orange belt by December 2022.</p><br>
+                               <p> I also joined an expat church and was able to not only learn more about Korean life and culture, but also better understand the challenges involved in living and working long-term in a new country.</p> <br>
+                               <p>This experience may have been short, but it shaped me into someone more willing to make mistakes, more ambitious in my goals, and more open to listening to others' experiences.</p>
+                        </div>
+                    </details>
+                </article>
+            </div>
+            <button>Back</button>
         </section>
-        <button>Back</button>
-    </article>
-    <footer>
-        <p>Made with &#9829; by Ethan himself. <a href="https://github.com/EthanLDot/Ethan_Lee_Portfolio">Original Repo</a></p>
-    </footer>   
+        <footer>
+            <div class="footer-text">
+                <p>Made with &#9829; by Ethan himself. <a href="https://github.com/EthanLDot/Ethan_Lee_Portfolio">Original Repo</a></p>
+            </div>
+        </footer>     
+    </div>
 </body>
 </html>

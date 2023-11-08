@@ -3,50 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about Ethan Lee. CompSci student and software engineer in California, USA.">
     <title>About Me | Ethan Lee</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <meta name="description" content="Learn more about Ethan Lee. CompSci student and software engineer in California, USA.">
-</head>
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css" >
+    
+   </head>
 <body>
-    <header>
-        <h1>Ethan Lee</h1>
-        <h2>California, USA</h2>
-        <h2>ethanlee2337@gmail.com</h2>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/about_me.html">About Me</a>
-            <a href="/portfolio.html">Portfolio</a>
-            <a href="/car_page.html">Car Talk</a>
-            <a href="/contact_form.html">Contact</a>
-            <a href="/experiment.html">Experimental</a>
-        </nav>
-    </header>
-    <article>
-        <figure>
-            <picture>
-                <source srcset="assets/nashville-potrait.webp" type="image/webp">
-                <img src="assets/nashville-potrait.jpg" alt="Ethan Lee's Nashville portrait">
-            </picture>
-            <figcaption>Me during a recent trip to Nashville, Tennessee</figcaption>
-        </figure>
-        <h2>About Me</h2>
-        <ul>
-            <li>2000s kid</li>
-            <li>Computer science student at University of California, San Diego</li>
-            <li>Served as a software engineer intern, IT intern, and tutor</li>
-            <li>Favorite Latin quote: <i lang = "la">Dum spiro, spero.</i></li>
-        </ul>
-        <p>
-            Since I started learning to code, my goal has been to make technology cooler, more accessible, and something everyone can interact with.<br>
-            I believe that when people use technology to do amazing things, they build a relationship of sorts with that technology, and I want to help others make the most out of those relationships to bring their visions to reality.<br>
-            I am a senior Computer Science student at UC San Diego, but more importantly I've been a team leader, a co-founder, a collaborator, an innovator, and a passionate coder. My career journey has enabled me to modernize the IT service desk of Anheuser-Busch, the world’s largest brewing company, teach hundreds of students from 15 nations how to code, lead one of UCSD’s most popular business courses, and develop relevant and impactful projects.<br> 
-            I am comfortable with <span style="color:#f00">Java, Python, and the HTML/CSS/JS trio</span> and I have experience with Agile development. With me in your organization, you don’t just get a fresh engineer; You get someone who knows how to communicate ideas with diverse audiences and is willing to solve problems that others would not address.<br>
-            I <em>am open</em> to offers to work.
-        </p>
-        <button>See My Portfolio</button>
-    </article>
-    <footer>
-        <p>Made with &#9829; by Ethan himself. <a href="https://github.com/EthanLDot/Ethan_Lee_Portfolio">Original Repo</a></p>
-    </footer>  
+    <div class="site-container">
+        <header class="site-header">
+            <a class="header-title" href="/">
+                <h1>Ethan Lee</h1>
+            </a>
+            <input id="menu-toggle" type="checkbox">
+            <label class='menu-button-container' for="menu-toggle">
+                <span class='menu-button'></span>
+            </label>
+            <nav>
+                <a href="/about_me.html">About Me</a>
+                <a href="/portfolio.html">Portfolio</a>
+                <a href="/contact_form.html">Contact</a>
+            </nav>
+        </header>
+        <section id="about-me">
+            <h2>About Me</h2>
+            <div class="container">
+                <aside>
+                    <figure>
+                        <picture>
+                            <source srcset="assets/nashville_potrait.avif" type="image/avif" media="(min-width: 480px)">
+                            <source srcset="assets/nashville_potrait.webp" type="image/webp" media="(min-width: 480px)">
+                            <source srcset="assets/nashville_potrait_lowres.webp" type="image/webp" media="(max-width: 480px)">
+                            <source srcset="assets/nashville_potrait.jpg" type="images/jpeg" media="(min-width: 480px)">
+                            <img id="aside-portrait" src="assets/nashville_potrait_lowres.jpg" alt="Ethan Lee's Nashville portrait" width="100" height="300">
+                            <!-- source: personal image -->
+                        </picture>
+                        <figcaption>Me during a recent trip to Nashville, Tennessee</figcaption>
+                    </figure>
+                </aside>
+                <article class="experience-article">
+                    <h2>I am a:</h2>
+                    <ul>
+                        <li>2000s kid</li>
+                        <li>Computer science student at University of California, San Diego</li>
+                        <li>Served as a software engineer intern, IT intern, and tutor</li>
+                        <li>Favorite Latin quote: <i lang = "la">Dum spiro, spero.</i></li>
+                    </ul>
+                    <p>
+                        Since I started learning to code, my goal has been to make technology cooler, more accessible, and something everyone can interact with.<br><br>
+                        I believe that when people use technology to do amazing things, they build a relationship of sorts with that technology, and I want to help others make the most out of those relationships to bring their visions to reality.<br><br>
+                        I am a senior Computer Science student at UC San Diego, but more importantly I've been a team leader, a co-founder, a collaborator, an innovator, and a passionate coder. My career journey has enabled me to modernize the IT service desk of Anheuser-Busch, the world’s largest brewing company, teach hundreds of students from 15 nations how to code, lead one of UCSD’s most popular business courses, and develop relevant and impactful projects.<br> <br>
+                        I am comfortable with <span style="color:#f00">Java, Python, and the HTML/CSS/JS trio</span> and I have experience with Agile development. With me in your organization, you don’t just get a fresh engineer; You get someone who knows how to communicate ideas with diverse audiences and is willing to solve problems that others would not address.<br>
+                        I <em>am open</em> to offers to work.
+                    </p>
+                    <button>See My Portfolio</button>
+                </article>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-text">
+                <p>Made with &#9829; by Ethan himself. <a href="https://github.com/EthanLDot/Ethan_Lee_Portfolio">Original Repo</a></p>
+            </div>
+        </footer>  
+    </div>  
 </body>
 </html>

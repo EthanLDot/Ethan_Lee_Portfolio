@@ -6,6 +6,7 @@
     <title>Portfolio | Ethan Lee</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <meta name="description" content="Ethan Lee's Personal Website and Work. Based in California, USA.">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css" >
     <style>
         section{
             border: 2px solid #000;
@@ -13,45 +14,50 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Ethan Lee</h1>
-        <h2>California, USA</h2>
-        <h2>ethanlee2337@gmail.com</h2>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/about_me.html">About Me</a>
-            <a href="/portfolio.html">Portfolio</a>
-            <a href="/car_page.html">Car Talk</a>
-            <a href="/contact_form.html">Contact</a>
-            <a href="/experiment.html">Experimental</a>
-        </nav>
-    </header>
-    <article>
-        <h2>My Portfolio</h2>
-        <section>
-            <picture>
-                <source srcset="assets/anheuser_busch.webp" type="image/webp" width="500" height="250">
-                <img src="assets/anheuser_busch.jpg" alt="image of Anheuser-Busch St. Louis Office">
-            </picture>
-            <a href="portfolio/experiences.html"><h3>Experiences</h3></a>
+    <div class="site-container">
+        <header class="site-header">
+            <a class="header-title" href="/">
+                <h1>Ethan Lee</h1>
+            </a>
+            <input id="menu-toggle" type="checkbox">
+            <label class='menu-button-container' for="menu-toggle">
+                <span class='menu-button'></span>
+            </label>
+            <nav>
+                <a href="/about_me.html">About Me</a>
+                <a href="/portfolio.html">Portfolio</a>
+                <a href="/contact_form.html">Contact</a>
+            </nav>
+        </header>
+        <section id="portfolio">
+            <h2 class="section-title">My Portfolio</h2>
+            <a href="portfolio/experiences.html">
+                <article id="experience-banner" class="banner">
+                    <h3 class="banner-caption">
+                        Experiences
+                    </h3>
+                </article>
+            </a>
+            <a href="portfolio/education.html">
+                <article id="education-banner" class="banner">
+                    <h3 class="banner-caption">
+                        Education
+                    </h3>
+                </article>
+            </a>
+            <a href="portfolio/projects.html">
+                <article id="projects-banner" class="banner">
+                    <h3 class="banner-caption">
+                        Projects
+                    </h3>
+                </article>
+            </a>
         </section>
-        <section>
-            <picture>
-                <source srcset="assets/ucsd.webp" type="image/webp" width="500" height="250">
-                <img src="assets/ucsd.jpg" alt="Image of UC San Diego Campus">
-            </picture>
-            <a href="portfolio/education.html"><h3>Education</h3></a>
-        </section>
-        <section>
-            <picture>
-                <source srcset="assets/office.webp" type="image/webp" width="500" height="250">
-                <img src="assets/office.jpg" alt="Small office good for doing coding projects">
-            </picture>
-            <a href="portfolio/projects.html"><h3>Projects</h3></a>
-        </section>
-    </article>
-    <footer>
-        <p>Made with &#9829; by Ethan himself. <a href="https://github.com/EthanLDot/Ethan_Lee_Portfolio">Original Repo</a></p>
-    </footer>   
+        <footer>
+            <div class="footer-text">
+                <p>Made with &#9829; by Ethan himself. <a href="https://github.com/EthanLDot/Ethan_Lee_Portfolio">Original Repo</a></p>
+            </div>
+        </footer>     
+    </div>
 </body>
 </html>

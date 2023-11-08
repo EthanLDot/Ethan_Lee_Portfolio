@@ -1,0 +1,117 @@
+section{
+    height: 80vh;
+    background-color: var(--std-background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section > *{
+    margin: 10px;
+}
+
+.container{
+    display: flex;
+    width: 80%;
+    height: 80%;
+    border: 1px solid white; 
+    border-radius: 5px;
+}
+
+.container > aside{
+    width: 40%;
+}
+
+.container > article{
+    width: 60%;
+}
+
+article{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+figure{
+    text-align: right;
+    padding: 10px;
+    font-size: 0.75rem;
+}
+
+figure:has(figcaption) > * {
+    color: black;
+  }
+
+  figure:has(figcaption) {
+    background: white;
+  }
+
+#aside-portrait{
+    width: 100%;
+    height: 100%;
+}
+
+article > button{
+    color: var(--text-unfocused);
+    background-color: transparent; 
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    padding: 10px 10px 10px 0;
+}
+
+article > button::before {
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+
+article > button:hover {
+    animation: bounce 1s, glow 1s forwards;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-50px);
+    }
+    60% {
+        transform: translateY(-25px);
+    }
+}
+
+@keyframes glow {
+    100% {
+        color: var(--text-focused);
+    }
+}
+
+@media (max-width: 480px) {
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container{
+        width: 100%;
+    }
+
+    #aside-portrait{
+        width: 150px;
+    }
+    
+    .container > article{
+        margin-top: 20px;
+        width: 90%;
+    }
+    
+    figure{
+        text-align: center;
+        padding: 0px;
+        font-size: 0.5rem;
+    }
+}
