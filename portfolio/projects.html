@@ -21,9 +21,7 @@
             <nav>
                 <a href="/about_me.html">About Me</a>
                 <a href="/portfolio.html">Portfolio</a>
-                <a href="/car_page.html">Car Talk</a>
                 <a href="/contact_form.html">Contact</a>
-                <a href="/experiment.html">Experimental</a>
             </nav>
         </header>
         <section>
@@ -32,8 +30,12 @@
                 <aside>
                     <figure>
                         <picture>
-                            <source srcset="../assets/portfolio-profile.webp" type="image/webp">
-                            <img src="../assets/portfolio-profile.jpg" alt="profile picture of Ethan Lee">
+                            <source srcset="../assets/portfolio_profile.avif" type="image/avif" media="(min-width: 480px)">
+                            <source srcset="../assets/portfolio_profile.webp" type="image/webp" media="(min-width: 480px)">
+                            <source srcset="../assets/portfolio_profile_lowres.webp" type="image/webp" media="(max-width: 480px)">
+                            <source srcset="../assets/portfolio_profile.jpg" type="images/jpeg" media="(min-width: 480px)">
+                            <img class="experience-img" src="../assets/portfolio_profile_lowres.jpg" alt="profile picture of Ethan Lee" width="300" height="100">
+                            <!-- source: personal image -->
                         </picture>
                     </figure>
                 </aside>

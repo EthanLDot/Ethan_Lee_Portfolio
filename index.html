@@ -22,19 +22,21 @@
             <nav>
                 <a href="/about_me.html">About Me</a>
                 <a href="/portfolio.html">Portfolio</a>
-                <a href="/car_page.html">Car Talk</a>
                 <a href="/contact_form.html">Contact</a>
-                <a href="/experiment.html">Experimental</a>
             </nav>
         </header>
         <section>
             <picture>
-                <source srcset="assets/home-page.webp" type="image/webp">
-                <img class="hero-img" src="assets/home-page.jpg" alt="Photo of Ethan Lee in a forest" style="background-image:url(/assets/placeholder.png)"> 
+                <source srcset="assets/home_page.avif" type="image/avif" media="(min-width: 480px)">
+                <source srcset="assets/home_page.webp" type="image/webp" media="(min-width: 480px)">
+                <source srcset="assets/home_page_lowres.webp" type="image/webp" media="(max-width: 480px)">
+                <source srcset="assets/home_page.jpg" type="images/jpeg" media="(min-width: 480px)">
+                <img class="hero-img" src="assets/home_page_lowres.jpg" alt="Photo of Ethan Lee in a forest" style="background-image:url(/assets/placeholder.png)" width="300" height="100">
+                <!-- source: personal image -->
             </picture>
             <div class="main-text">
                 <h2>Welcome to my website.</h2>
-                <h2><strong>I make technology cool for everyone.</strong></h2>       
+                <h2><strong>I make technology cool for everyone.</strong></h2>     
                 <button>See My Portfolio</button>
             </div>
         </section>

@@ -1,6 +1,6 @@
 section{
     height: 80vh;
-    background-color: #3f3f3f;
+    background-color: var(--std-background-color);
     overflow-y: scroll;
 }
 
@@ -19,20 +19,24 @@ section{
 }
 
 #experience-banner{
-    background-image: url(/assets/anheuser_busch.jpg);
+    background-image: url(/assets/anheuser_busch.jpg), url(/assets/anheuser_busch_lowres.jpg);
+    /* Source : Image by John W. Iwanski via Flickr, licensed under ("https://creativecommons.org/licenses/by-nc/2.0/") CC BY-NC 2.0 */
 }
 
 #education-banner{
-    background-image: url(/assets/ucsd.jpg);
+    background-image: url(/assets/ucsd.jpg), url(/assets/ucsd_lowres.jpg);
+    /* source: personal image */
+
 }
 
 #projects-banner{
-    background-image: url(/assets/office.jpg);
+    background-image: url(/assets/office.jpg), url(/assets/office_lowres.jpg);
+    /* source: AI generated image */
 }
 
 .banner-caption {
-    color:#fff;
-    font-size: 2rem;
+    color:var(--text-color);
+    font-size: 3rem;
     font-weight: 700;
     padding: 1%;
 }

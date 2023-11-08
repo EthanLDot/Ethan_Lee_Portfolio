@@ -21,9 +21,7 @@
             <nav>
                 <a href="/about_me.html">About Me</a>
                 <a href="/portfolio.html">Portfolio</a>
-                <a href="/car_page.html">Car Talk</a>
                 <a href="/contact_form.html">Contact</a>
-                <a href="/experiment.html">Experimental</a>
             </nav>
         </header>
         <section>
@@ -32,9 +30,14 @@
                 <aside>
                     <figure>
                         <picture>
-                            <source srcset="../assets/nseoultower.webp" type="image/webp">
-                            <img src="../assets/nseoultower.jpg" alt="Ethan at a balcony overlooking Seoul">
+                            <source srcset="../assets/nseoultower.avif" type="image/avif" media="(min-width: 480px)">
+                            <source srcset="../assets/nseoultower.webp" type="image/webp" media="(min-width: 480px)">
+                            <source srcset="../assets/nseoultower_lowres.webp" type="image/webp" media="(max-width: 480px)">
+                            <source srcset="../assets/nseoultower.jpg" type="images/jpeg" media="(min-width: 480px)">
+                            <img class="experience-img" src="../assets/nseoultower_lowres.jpg" alt="Ethan at a balcony overlooking Seoul" width="300" height="100">
+                            <!-- source: personal image -->
                         </picture>
+                        <figcaption>Me at N Seoul Tower at sunset, September 2022.</figcaption>
                     </figure>
                 </aside>
                 <article>

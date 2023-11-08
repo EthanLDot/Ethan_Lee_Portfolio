@@ -22,9 +22,7 @@
             <nav>
                 <a href="/about_me.html">About Me</a>
                 <a href="/portfolio.html">Portfolio</a>
-                <a href="/car_page.html">Car Talk</a>
                 <a href="/contact_form.html">Contact</a>
-                <a href="/experiment.html">Experimental</a>
             </nav>
         </header>
         <section>
@@ -53,10 +51,10 @@
                 </ul>
         
                 <form>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
                     <fieldset>
                         <legend>Who Are You?</legend>
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
                         <label for="grade_school">
                             <input type="radio" id="grade_school" name="role" value="grade_school" required>
                             Grade School Student
@@ -84,7 +82,7 @@
                         </label>
                         <label for="no_response">
                             <input type="radio" id="no_response" name="urgency" value="no_response" required>
-                            Working Professional
+                            No Need for Reply
                         </label>
                     </fieldset>
                     <input type="submit" value="Submit">

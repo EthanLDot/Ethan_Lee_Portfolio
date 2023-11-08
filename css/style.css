@@ -1,11 +1,16 @@
 :root{
   font-size: 16px;
+  --text-color: #fff;
+  --std-background-color: #3f3f3f;
+  --header-background: #181818;
+  --text-unfocused: #aaa;
+  --text-focused: #fff;
 }
 
 * {
   font-family: "Montserrat", Verdana, Arial, sans-serif;
   font-weight: 400;
-  color: #fff;
+  color: var(--text-color);
   margin: 0;
   box-sizing: border-box;
 }
@@ -56,7 +61,8 @@
   grid-template-rows: repeat(10, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  height: 100vh;
+  height: 100dvh;
+  width: 100dvw;
 }
 
 section { 
@@ -68,7 +74,7 @@ footer {
 }
 
 header, footer{
-  background-color: #181818;
+  background-color: var(--header-background);
 }
 
 .site-header { 
@@ -87,6 +93,11 @@ header, footer{
   font-size: 2rem;
 }
 
+.header-title>h1:hover{
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 nav > a {
   font-size: 1rem;
   margin-left: 1em;
@@ -94,7 +105,8 @@ nav > a {
 }
 
 nav > a:hover {
-  color: #fff;
+  transition: color 0.5s linear;
+  color: var(--text-color);
 }
 
 footer {
@@ -137,7 +149,7 @@ nav {
 .menu-button::before,
 .menu-button::after {
   display: block;
-  background-color: #fff;
+  background-color: var(--text-color);
   position: absolute;
   height: 4px;
   width: 30px;
@@ -198,7 +210,7 @@ nav {
     display: flex;
     justify-content: center;
     width: 25%;
-    background-color: #181818;
+    background-color: var(--header-background);
   }
 
   footer {
