@@ -1,6 +1,6 @@
 section{
     height: 80vh;
-    background-color: var(--std-background-color);
+    background-color: var(--std-background-color, gray);
     display: flex;
     flex-direction: column;
     justify-content: center;
