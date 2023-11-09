@@ -10,7 +10,7 @@
 * {
   font-family: "Montserrat", Verdana, Arial, sans-serif;
   font-weight: 400;
-  color: var(--text-color);
+  color: var(--text-color, white);
   margin: 0;
   box-sizing: border-box;
 }
@@ -69,7 +69,7 @@
 
 @keyframes glow {
   100% {
-      color: var(--text-focused);
+      color: var(--text-focused, white);
   }
 }
 
@@ -86,7 +86,7 @@
 section { 
   grid-area: 2 / 1 / 10 / 2; 
   height: 80vh;
-  background-color: var(--std-background-color);
+  background-color: var(--std-background-color, black);
 }
 
 footer { 
@@ -94,7 +94,7 @@ footer {
 }
 
 header, footer{
-  background-color: var(--header-background);
+  background-color: var(--header-background, black);
 }
 
 .site-header { 
@@ -126,7 +126,7 @@ nav > a {
 
 nav > a:hover {
   transition: color 0.5s linear;
-  color: var(--text-color);
+  color: var(--text-color, white);
 }
 
 footer {
@@ -169,7 +169,7 @@ nav {
 .menu-button::before,
 .menu-button::after {
   display: block;
-  background-color: var(--text-color);
+  background-color: var(--text-color, gray);
   position: absolute;
   height: 4px;
   width: 30px;
@@ -230,7 +230,7 @@ nav {
     display: flex;
     justify-content: center;
     width: 25%;
-    background-color: var(--header-background);
+    background-color: var(--header-background, black);
   }
 
   footer {
@@ -251,7 +251,7 @@ nav {
   text-align: center;
   top: 45vh;
   width: 100%;
-  color: var(--text-color);
+  color: var(--text-color, white);
 }
 
 .main-text, .main-text > button {
@@ -267,7 +267,7 @@ nav {
 
 
 .main-text > button{
-  color: var(--text-unfocused);
+  color: var(--text-unfocused, gray);
   background-color: transparent; 
   cursor: pointer;
   border: none;
@@ -354,7 +354,7 @@ figure:has(figcaption) {
 }
 
 button{
-  color: var(--text-unfocused);
+  color: var(--text-unfocused, gray);
   background-color: transparent; 
   cursor: pointer;
   border: none;
@@ -436,7 +436,7 @@ button:hover {
 }
 
 .banner-caption {
-  color:var(--text-color);
+  color:var(--text-color, white);
   font-size: 3rem;
   font-weight: 700;
   padding: 1%;
@@ -620,7 +620,7 @@ option{
 
 input[type=submit] {
       background-color: #333;
-      color: var(--text-color);
+      color: var(--text-color, white);
       border: none;
       padding: 10px 20px;
       border-radius: 5px;
