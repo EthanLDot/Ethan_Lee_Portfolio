@@ -6,22 +6,19 @@
     <title>Contact Ethan Lee</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <meta name="description" content="Reach out to Ethan Lee, based in California, USA.">
-    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css" >
+    <link rel="stylesheet" href="/css/styletest.css" media="screen" type="text/css" >
 </head>
 <body>
     <div class="site-container">
-        <header class="site-header">
-            <a class="header-title" href="/">
-                <h1>Ethan Lee</h1>
-            </a>
-            <input id="menu-toggle" type="checkbox">
-            <label class='menu-button-container' for="menu-toggle">
-                <span class='menu-button'></span>
-            </label>
+        <header id="site-header">
+            <h1><a href="/">Ethan Lee</a></h1>
+            <button type="button" id="mainMenuOpen" tabindex="-1" hidden></button>
             <nav>
-                <a href="/about_me.html">About Me</a>
-                <a href="/portfolio.html">Portfolio</a>
-                <a href="/contact_form.html">Contact</a>
+                <div>
+                    <a href="/about_me.html">About Me</a>
+                    <a href="/portfolio.html">Portfolio</a>
+                    <a href="/contact_form.html">Contact</a>
+                </div>
             </nav>
         </header>
         <section id="contact-page">
@@ -88,11 +85,9 @@
                 </form>
             </article>        
         </section>
-        <footer>
-            <div class="footer-text">
-                <p>Made with &#9829; by Ethan himself. <a href="https://github.com/EthanLDot/Ethan_Lee_Portfolio">Original Repo</a></p>
-            </div>
-        </footer>  
+        <footer id="site-footer">
+            <p>Made with &#9829; by Ethan himself. <a href="https://github.com/EthanLDot/Ethan_Lee_Portfolio">Original Repo</a></p>
+        </footer> 
     </div>
 </body>
 </html>

@@ -1,0 +1,523 @@
+:root{
+    font-size: 16px;
+    --text-color: #fff;
+    --std-background-color: #3f3f3f;
+    --header-background: #181818;
+    --text-unfocused: #aaa;
+    --text-focused: #fff;
+  }
+  
+  * {
+    font-family: "Montserrat", Verdana, Arial, sans-serif;
+    font-weight: 400;
+    color: var(--text-color, white);
+    margin: 0;
+    box-sizing: border-box;
+    /*CHANGES*/
+    background-color: var(--std-background-color);
+  }
+
+  /* fonts */
+  
+/* montserrat-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/montserrat-v26-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+         url('/assets/fonts/montserrat-v26-latin-regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  }
+  
+  /* montserrat-italic - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 400;
+    src: url('/assets/fonts/montserrat-v26-latin-italic.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+         url('/assets/fonts/montserrat-v26-latin-italic.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  }
+  
+  /* montserrat-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/montserrat-v26-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+         url('/assets/fonts/montserrat-v26-latin-700.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  }
+  
+  /* montserrat-700italic - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 700;
+    src: url('/assets/fonts/montserrat-v26-latin-700italic.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+            url('/assets/fonts/montserrat-v26-latin-700italic.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  }
+
+  /* animations */
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-50px);
+    }
+    60% {
+        transform: translateY(-25px);
+    }
+  }
+  
+  @keyframes glow {
+    100% {
+        color: var(--text-focused, white);
+    }
+  }
+
+  #site-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  /* header css */
+  
+  #site-header{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+  }
+
+  #site-header, #site-header * {
+    background-color: var(--header-background, black)
+  }
+  
+  #site-header > nav li{
+    list-style: none;
+  }
+
+  #site-header a{
+    text-decoration: none;
+  }
+
+  #site-header h1{
+    font-size: 2rem;
+  }
+
+  #site-header nav a {
+    font-size: 1rem;
+    margin-left: 1em;
+    color: #aaa;
+  }
+
+  #site-header nav a:hover {
+    transition: color 0.5s linear;
+    color: var(--text-color, white);
+  }
+
+  /* footer */
+  #site-footer { 
+    grid-area: 10 / 1 / 11 / 2;
+    bottom: 0;
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  #site-footer, #site-footer * {
+    background-color: var(--header-background, black)
+  }
+
+  #site-footer > *{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  #site-footer * {
+    margin: 0 5px;
+  }
+
+  /* section - general */
+
+  section {
+    grid-area: 2 / 1 / 10 / 2; 
+    height: 80vh;
+    overflow-y: scroll;
+  }
+
+  section > h2{
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* index.html */
+
+  #hero-img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+  }
+
+  #index {
+    overflow-y: hidden;
+  }
+
+  #index * {
+    background-color: transparent;
+  }
+
+  #index > div {
+    position: absolute;
+    text-align: center;
+    top: 45vh;
+    width: 100%;
+    color: var(--text-color, white);
+    font-size: 1.5rem;
+  }
+
+  #index > div > button{
+    font-size: 1.5rem;
+    color: var(--text-unfocused, gray);
+    cursor: pointer;
+    border: none;
+    padding: 50px;
+  }
+  
+  #index > div > button::before, .container > article > button::before, #experience button::before{
+    transition: all 0.3s ease;
+  }
+  
+  #index > div > button:hover, .container > article > button:hover, #experience button:hover {
+    animation: bounce 1s, glow 1s forwards;
+  }
+
+  /* containers - general */
+
+  .container{
+    display: flex;
+    width: 80%;
+    border: 1px solid white; 
+    border-radius: 10px;
+  }
+
+  .container > aside{
+    width: 40%;
+  }
+
+  .container > aside img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .container > aside figure{
+    text-align: right;
+    padding: 10px;
+    font-size: .75rem;
+  }
+  
+  .container > article{
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    line-height: 2;
+    overflow-y: scroll;
+    padding: 0 20px;
+  }
+
+  .container > article > * {
+    margin: 10px 0;
+  }
+
+  .container > article > button
+  {
+    font-size: 1rem;
+    color: var(--text-unfocused, gray);
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+  }
+
+  /* about me */
+  #about-me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow-y: hidden;
+  }
+
+  #about-me > * {
+    margin: 10px;
+  }
+
+  #about-me .container {
+    height: 80%;
+  }
+
+  /* banners */
+  .banner {
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+
+  .banner > * {
+    font-size: 3rem;
+    font-weight: 700;
+    padding: 1%;
+    background-color: transparent;
+  }
+
+  /* portfolio */
+  #portfolio > a {
+    text-decoration: none;
+  }
+
+  #experience-banner{
+    background-image: url(/assets/anheuser_busch.jpg), url(/assets/anheuser_busch_lowres.jpg);
+    /* Source : Image by John W. Iwanski via Flickr, licensed under ("https://creativecommons.org/licenses/by-nc/2.0/") CC BY-NC 2.0 */
+  }
+  
+  #education-banner{
+    background-image: url(/assets/ucsd.jpg), url(/assets/ucsd_lowres.jpg);
+    /* source: personal image */
+  
+  }
+  
+  #projects-banner{
+    background-image: url(/assets/office.jpg), url(/assets/office_lowres.jpg);
+    /* source: AI generated image */
+  }
+
+  /* experience page */
+  #experience {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  #experience .container > article{
+    line-height: 1.25;
+    overflow-y: hidden;
+  }
+
+  #experience button {
+    font-size: 1rem;
+    color: var(--text-unfocused, gray);
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    margin: 10px 0;
+  }
+
+  /* contact form */
+  /* from contact form html */
+  #contact-page{
+    overflow-y: scroll;
+    text-align: center;
+    & ul{
+      width: 50%;
+      list-style-type: none;
+      padding-inline: 0;
+    }
+    
+    & ul > * {
+      margin: 5px;
+    }
+
+    & article{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    & hr{
+      width: 50%;
+      margin: auto;
+    }
+  }
+
+  #contact-page > *{
+    margin: 1rem 0;
+  }
+
+  .icon{
+    width: 50px;
+    height: 50px;
+  }
+
+  .contact-icons > a{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin: 25px;
+  }
+
+  #contact-page form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #contact-page form > * {
+    margin: 0.5rem;
+  }
+
+  #contact-page fieldset, textarea, input[type="email"], input[type="text"]{
+    width: 80%;
+  }
+
+  #contact-page input[type="email"], textarea{
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    color: #fff;
+    caret-color: #fff;
+  }
+  
+  #contact-page fieldset > label {
+    display: block;
+  }
+
+  #contact-page input[type=submit] {
+    background-color: #333;
+    color: var(--text-color, white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  #contact-page input[type=submit]:hover {
+    transition: background-color 0.3s ease;
+    background-color: color(display-p3 0.484 0.806 0.385 / 0.5);
+  }
+
+  
+  /* media queries */
+  @media (max-width: 768px) {
+    #index > div, #index > div> button {
+        font-size: 1rem;
+    }
+    #index > div > button{
+        padding: 10px 25px 10px 25px;
+    }
+  }
+
+  @media (max-width: 480px) {
+
+    /* hamburger menu */ 
+    #mainMenuOpen {
+      display:block;
+      font-size:1.8em;
+      line-height:1;
+      border:0;
+    }
+
+    #mainMenuOpen:after {
+      content:"\2630";
+    }
+
+    #mainMenuOpen + nav {
+      position:fixed;
+          top: calc(10vh + 1em);
+          right: 0;
+          background-color: transparent;
+    }
+
+    #mainMenuOpen + nav div {
+      display:flex;
+      flex-direction: column;
+      position:relative;
+      top: -100vh;        
+      transition:top 0.5s;
+    }
+
+    #mainMenuOpen:focus + nav div,
+    #mainMenuOpen + nav:focus-within div {              
+      top: 0vh;
+    }
+
+    #mainMenuOpen + nav a {
+        padding: 10px;
+        text-align: center;
+        margin: 0;
+    } 
+
+    /* footer */
+    #site-footer { 
+      font-size: 0.5rem;
+    }
+
+    /* containers */
+    .container{
+      flex-direction: column;
+      align-items: center;
+      width: 95%;
+    }
+
+    .container > aside figure{
+      text-align: center;
+      padding: 0px;
+      margin-top: 10px;
+    }
+
+    .container figcaption{
+      display: none;
+    }
+
+    .container > article{
+      margin-top: 10px;
+      width: 95%;
+      line-height: 1.5;
+    }
+
+    /* banners */
+    .banner{
+      align-items: center;
+      justify-content: center;
+    }
+    .banner > * {
+        font-size: 1.5rem;
+    }
+
+    #experience .container > article{
+      line-height: 1;
+      font-size: 1.25rem;
+    }
+
+    /* contact form */
+
+    #contact-page{
+      font-size: 0.75rem;
+    }
+
+    #contact-page > hr, #contact-page form{
+      width: 100%;
+    }
+
+  }
