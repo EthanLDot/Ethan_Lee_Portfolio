@@ -387,7 +387,7 @@
     width: 80%;
   }
 
-  #contact-page input[type="email"], textarea{
+  #contact-page input[type="email"], input[type="text"], textarea{
     padding: 12px 20px;
     margin: 8px 0;
     display: block;
@@ -402,7 +402,7 @@
     display: block;
   }
 
-  #contact-page input[type=submit] {
+  #contact-page button[type=submit] {
     background-color: #333;
     color: var(--text-color, white);
     border: none;
@@ -412,9 +412,21 @@
     margin-bottom: 10px;
   }
 
-  #contact-page input[type=submit]:hover {
+  #contact-page button[type=submit]:hover {
     transition: background-color 0.3s ease;
     background-color: color(display-p3 0.484 0.806 0.385 / 0.5);
+  }
+
+  #contact-page output {
+    font-size: 0.75rem;
+  }
+
+  #contact-page output[name="error"] {
+    color: red;
+  }
+  
+  #contact-page output[name="information"] {
+    color: greenyellow;
   }
 
   
