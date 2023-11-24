@@ -244,23 +244,25 @@
     font-size: 1.5rem;
   }
 
-  #index > div > button{
+  #index > div > a{
     font-size: 1.5rem;
+    display: inline-block;
     color: var(--image-text-unfocused, gray);
     cursor: pointer;
-    border: none;
     padding: 50px;
+    text-decoration: none;
+    border: none;
   }
   
-  #index > div > button::before, .container > article > button::before, #experience button::before{
+  #index > div > a::before, .container > article > a::before, #experience a::before{
     transition: all 0.3s ease;
   }
   
-  #index > div > button:hover {
+  #index > div > a:hover {
     animation: bounce 1s, glow-no-mode 1s forwards;
   }
 
-  .container > article > button:hover, #experience button:hover {
+  .container > article > a:hover, #experience a:hover {
     animation: bounce 1s, glow 1s forwards;
   }
 
@@ -302,13 +304,13 @@
     margin: 10px 0;
   }
 
-  .container > article > button
+  .container > article > a
   {
     font-size: 1rem;
     color: var(--text-unfocused, gray);
     background-color: transparent;
     cursor: pointer;
-    border: none;
+    text-decoration: none;
   }
 
   /* about me */
@@ -378,11 +380,12 @@
     overflow-y: hidden;
   }
 
-  #experience button {
+  #experience a {
     font-size: 1rem;
     color: var(--text-unfocused, gray);
     background-color: transparent;
     cursor: pointer;
+    text-decoration: none;
     border: none;
     margin: 10px 0;
   }
@@ -463,7 +466,6 @@
   #contact-page button[type=submit] {
     background-color: #333;
     color: var(--image-text-color, white);
-    border-color: var(--image-text-color, white);
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -494,10 +496,10 @@
   
   /* media queries */
   @media (max-width: 768px) {
-    #index > div, #index > div> button {
+    #index > div, #index > div> a {
         font-size: 1rem;
     }
-    #index > div > button{
+    #index > div > a{
         padding: 10px 25px 10px 25px;
     }
   }
