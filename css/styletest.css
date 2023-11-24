@@ -1,10 +1,23 @@
 :root{
     font-size: 16px;
-    --text-color: #fff;
-    --std-background-color: #3f3f3f;
-    --header-background: #181818;
-    --text-unfocused: #aaa;
-    --text-focused: #fff;
+    --background: var(--background-color-dark);
+    --text-color: var(--text-color-dark);
+    --header: var(--header-background-dark);
+    --text-unfocused: var(--text-unfocused-dark);
+    --text-focused: var(--text-focused-dark);
+    --text-color-dark: #fff;
+    --background-color-dark: #3f3f3f;
+    --header-background-dark: #181818;
+    --text-unfocused-dark: #aaa;
+    --text-focused-dark: #fff;
+    --text-color-light: #000;
+    --background-color-light: #a8a8a8;
+    --header-background-light: #e6e6e6;
+    --text-unfocused-light: #5e5e5e;
+    --text-focused-light: #000;
+    --image-text-color: #fff;
+    --image-text-unfocused: #aaa;
+    --image-text-focused: #fff;
   }
   
   * {
@@ -12,9 +25,7 @@
     font-weight: 400;
     color: var(--text-color, white);
     margin: 0;
-    box-sizing: border-box;
-    /*CHANGES*/
-    background-color: var(--std-background-color);
+    background-color: var(--background);
   }
 
   /* fonts */
@@ -79,14 +90,20 @@
     }
   }
 
+  @keyframes glow-no-mode {
+    100% {
+        color: var(--image-text-focused, white);
+    }
+  }
+
   #site-container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(10, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    height: 100vh;
-    width: 100vw;
+    max-height: 100vh;
+    overflow-y: hidden;
   }
 
   /* header css */
@@ -97,10 +114,11 @@
     align-items: center;
     justify-content: space-between;
     padding: 1em;
+    box-sizing: border-box;
   }
 
   #site-header, #site-header * {
-    background-color: var(--header-background, black)
+    background-color: var(--header);
   }
   
   #site-header > nav li{
@@ -118,7 +136,7 @@
   #site-header nav a {
     font-size: 1rem;
     margin-left: 1em;
-    color: #aaa;
+    color: var(--text-unfocused, white);
   }
 
   #site-header nav a:hover {
@@ -128,32 +146,71 @@
 
   /* footer */
   #site-footer { 
-    grid-area: 10 / 1 / 11 / 2;
+    grid-area: 9 / 1 / 11 / 2;
     bottom: 0;
-    width: 100%;
     font-size: 1rem;
   }
 
+  #site-footer .switch{
+    height: fit-content;
+  }
+
+  .switch input {
+    display: none;
+  }
+
+  #site-footer .slider{
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 27px;
+    background-color: #2b2b2b;
+    border: 1px #fff solid;
+    border-radius: 34px;
+  }
+
+  #site-footer input:checked + .slider{
+    background-color: #e6e6e6;
+    border: 1px #000 solid;
+  }
+
+  #site-footer .slider:before{
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+  }
+
+  #site-footer input:checked + .slider:before{
+    transform: translateX(19px);
+    background-color: #000;
+  }
+
   #site-footer, #site-footer * {
-    background-color: var(--header-background, black)
+    background-color: var(--header);
   }
 
   #site-footer > *{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    padding: 5px;
+    height: 50%;
+    box-sizing: border-box;
   }
 
-  #site-footer * {
+  #site-footer > * > * {
     margin: 0 5px;
   }
 
   /* section - general */
 
   section {
-    grid-area: 2 / 1 / 10 / 2; 
-    height: 80vh;
+    grid-area: 2 / 1 / 9 / 2; 
     overflow-y: scroll;
   }
 
@@ -176,20 +233,20 @@
 
   #index * {
     background-color: transparent;
+    color: var(--image-text-color, white);
   }
 
   #index > div {
     position: absolute;
     text-align: center;
-    top: 45vh;
+    top: 30%;
     width: 100%;
-    color: var(--text-color, white);
     font-size: 1.5rem;
   }
 
   #index > div > button{
     font-size: 1.5rem;
-    color: var(--text-unfocused, gray);
+    color: var(--image-text-unfocused, gray);
     cursor: pointer;
     border: none;
     padding: 50px;
@@ -199,7 +256,11 @@
     transition: all 0.3s ease;
   }
   
-  #index > div > button:hover, .container > article > button:hover, #experience button:hover {
+  #index > div > button:hover {
+    animation: bounce 1s, glow-no-mode 1s forwards;
+  }
+
+  .container > article > button:hover, #experience button:hover {
     animation: bounce 1s, glow 1s forwards;
   }
 
@@ -208,7 +269,7 @@
   .container{
     display: flex;
     width: 80%;
-    border: 1px solid white; 
+    border: 1px solid var(--text-color); 
     border-radius: 10px;
   }
 
@@ -259,10 +320,6 @@
     overflow-y: hidden;
   }
 
-  #about-me > * {
-    margin: 10px;
-  }
-
   #about-me .container {
     height: 80%;
   }
@@ -282,6 +339,7 @@
   .banner > * {
     font-size: 3rem;
     font-weight: 700;
+    color: var(--image-text-color);
     padding: 1%;
     background-color: transparent;
   }
@@ -391,11 +449,11 @@
     padding: 12px 20px;
     margin: 8px 0;
     display: block;
-    border: 1px solid #ccc;
+    border: 1px solid var(--text-color, white);;
     border-radius: 4px;
     text-align: center;
-    color: #fff;
-    caret-color: #fff;
+    color: var(--text-color, white);;
+    caret-color: var(--text-color, white);;
   }
   
   #contact-page fieldset > label {
@@ -404,8 +462,8 @@
 
   #contact-page button[type=submit] {
     background-color: #333;
-    color: var(--text-color, white);
-    border: none;
+    color: var(--image-text-color, white);
+    border-color: var(--image-text-color, white);
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -427,6 +485,10 @@
   
   #contact-page output[name="information"] {
     color: greenyellow;
+  }
+
+  #contact-page > hr {
+    border-color: var(--text-color, white)
   }
 
   
@@ -513,6 +575,7 @@
       align-items: center;
       justify-content: center;
     }
+
     .banner > * {
         font-size: 1.5rem;
     }
@@ -531,5 +594,24 @@
     #contact-page > hr, #contact-page form{
       width: 100%;
     }
+
+    #site-footer .slider{
+      width: 30px;
+      height: 17px;
+      border-radius: 17px;
+    }
+  
+    #site-footer .slider:before{
+      height: 13px;
+      width: 13px;
+      left: 2px;
+      bottom: 2px;
+    }
+  
+    #site-footer input:checked + .slider:before{
+      transform: translateX(13px);
+    }
+
+  
 
   }
