@@ -47,11 +47,10 @@
                 <form action="https://httpbin.org/get" method="GET" id="contact-form">
                     <label for="name">Name <span aria-label="required">*</span>
                         <input type="text" id="name" name="name" pattern="^[\p{L} ]+$" required>
-                        <span class="error" aria-live="polite"></span>
                     </label>
                     <label for="email">Email Address <span aria-label="required">*</span>
-                        <input type="email" id="email" name="email" required>
-                        <span class="error" aria-live="polite"></span>
+                        <input type="email" id="email" name="email" pattern="\A[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@
+                        (?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\z" required>
                     </label>
                     <fieldset>
                         <legend>Who Are You? </legend>
@@ -70,12 +69,9 @@
                     </fieldset>
                     <label for="background-info">What Else Should I Know About You?
                         <textarea id="background-info" name="background-info" rows="2" cols="50" maxlength="100"></textarea>
-                        <span class="char_count">100/100</span>
                     </label>
                     <label for="comments">What's Up? <span aria-label="required">*</span>
-                        <textarea id="comments" name="comments" rows="4" cols="50"  minlength = "30" maxlength = "400" required></textarea>
-                        <span class="char_count">400/400</span>
-                        <span class="error" aria-live="polite"></span>
+                        <textarea id="comments" name="comments" rows="4" cols="50"  minlength = "30" required></textarea>
                     </label>
                     <fieldset>
                         <legend>How Quickly Do You Need a Reply?</legend>
@@ -104,13 +100,12 @@
         <footer id="site-footer">
             <p>Made with &#9829; by Ethan himself. <a href="https://github.com/EthanLDot/Ethan_Lee_Portfolio">Original Repo</a></p>
             <label class="switch">
-                <input type="checkbox" id="themeToggle" onclick="toggleTheme()">
+                <input type="checkbox" id="themeToggle">
                 Dark
                 <span class="slider"></span>
                 Light
             </label>
         </footer>   
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
