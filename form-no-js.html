@@ -6,7 +6,7 @@
     <title>Contact Ethan Lee</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <meta name="description" content="Reach out to Ethan Lee, based in California, USA.">
-    <link rel="stylesheet" href="/css/styletest.css" media="screen" type="text/css" >
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css" >
 </head>
 <body>
     <div id="site-container">
@@ -44,7 +44,7 @@
                     <strong><span aria-label="required">*</span></strong>.
                 </p> -->
         
-                <form action="https://httpbin.org/get" method="GET" id="contact-form">
+                <form action="https://httpbin.org/post" method="POST" id="contact-form">
                     <label for="name">Name <span aria-label="required">*</span>
                         <input type="text" id="name" name="name" pattern="^[\p{L} ]+$" required>
                     </label>
@@ -99,12 +99,12 @@
         </section>
         <footer id="site-footer">
             <p>Made with &#9829; by Ethan himself. <a href="https://github.com/EthanLDot/Ethan_Lee_Portfolio">Original Repo</a></p>
-            <label class="switch">
+            <!-- <label class="switch">
                 <input type="checkbox" id="themeToggle">
                 Dark
                 <span class="slider"></span>
                 Light
-            </label>
+            </label> -->
         </footer>   
     </div>
 </body>
