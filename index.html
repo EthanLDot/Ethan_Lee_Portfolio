@@ -7,43 +7,49 @@
     <title>Ethan Lee's Website</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css" >
+    <noscript>
+        <style>
+            #site-footer .switch {display:none;}
+        </style>
+    </noscript>
 </head>
 <body>
-    <div class="site-container">
-        <header class="site-header">
-            <a class="header-title" href="/">
-                <h1>Ethan Lee</h1>
-            </a>
-            <input id="menu-toggle" type="checkbox">
-            <label class='menu-button-container' for="menu-toggle">
-                <span class='menu-button'></span>
-            </label>
+    <div id="site-container">
+        <header id="site-header">
+            <h1><a href="/">Ethan Lee</a></h1>
+            <button type="button" id="mainMenuOpen" tabindex="-1" hidden></button>
             <nav>
-                <a href="/about_me.html">About Me</a>
-                <a href="/portfolio.html">Portfolio</a>
-                <a href="/contact_form.html">Contact</a>
+                <div>
+                    <a href="/about_me.html">About Me</a>
+                    <a href="/portfolio.html">Portfolio</a>
+                    <a href="/contact_form.html">Contact</a>
+                </div>
             </nav>
         </header>
-        <section>
+        <section id="index">
             <picture>
                 <source srcset="assets/home_page.avif" type="image/avif" media="(min-width: 480px)">
                 <source srcset="assets/home_page.webp" type="image/webp" media="(min-width: 480px)">
                 <source srcset="assets/home_page_lowres.webp" type="image/webp" media="(max-width: 480px)">
                 <source srcset="assets/home_page.jpg" type="images/jpeg" media="(min-width: 480px)">
-                <img class="hero-img" src="assets/home_page_lowres.jpg" alt="Photo of Ethan Lee in a forest" style="background-image:url(/assets/placeholder.png)" width="300" height="100">
+                <img id="hero-img" src="assets/home_page_lowres.jpg" alt="Photo of Ethan Lee in a forest" style="background-image:url(/assets/placeholder.png)" width="300" height="100">
                 <!-- source: personal image -->
             </picture>
-            <div class="main-text">
-                <h2>Welcome to my website.</h2>
-                <h2><strong>I make technology cool for everyone.</strong></h2>     
-                <button>See My Portfolio</button>
+            <div>
+                <h2>Welcome to my website. <br> <strong>I make technology cool for everyone.</strong></h2>   
+                <a href="portfolio.html">See My Portfolio</a>
             </div>
         </section>
-        <footer>
-            <div class="footer-text">
+        <footer id="site-footer">
                 <p>Made with &#9829; by Ethan himself. <a href="https://github.com/EthanLDot/Ethan_Lee_Portfolio">Original Repo</a></p>
-            </div>
+                <label class="switch">
+                    <input type="checkbox" id="themeToggle" onclick="toggleTheme()">
+                    Dark
+                    <span class="slider"></span>
+                    Light
+                </label>
         </footer>   
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
