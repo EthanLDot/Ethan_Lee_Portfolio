@@ -7,6 +7,7 @@
     <title>Ethan Lee's Website</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css" >
+    <script src="./myheader.js" type="module"></script>
     <noscript>
         <style>
             #site-footer .switch {display:none;}
@@ -15,17 +16,7 @@
 </head>
 <body>
     <div id="site-container">
-        <header id="site-header">
-            <h1><a href="/">Ethan Lee</a></h1>
-            <button type="button" id="mainMenuOpen" tabindex="-1" hidden></button>
-            <nav>
-                <div>
-                    <a href="/about_me.html">About Me</a>
-                    <a href="/portfolio.html">Portfolio</a>
-                    <a href="/contact_form.html">Contact</a>
-                </div>
-            </nav>
-        </header>
+        <my-header></my-header>
         <section id="index">
             <picture>
                 <source srcset="assets/home_page.avif" type="image/avif" media="(min-width: 480px)">

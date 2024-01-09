@@ -110,7 +110,7 @@
   #site-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-rows: repeat(9, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     max-height: 100vh;
@@ -118,46 +118,14 @@
   }
 
   /* header css */
-  
-  #site-header{
-    display: flex;
-    list-style: none;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1em;
-    box-sizing: border-box;
-  }
 
-  #site-header, #site-header * {
+  my-header {
     background-color: var(--header);
-  }
-  
-  #site-header > nav li{
-    list-style: none;
-  }
-
-  #site-header a{
-    text-decoration: none;
-  }
-
-  #site-header h1{
-    font-size: 2rem;
-  }
-
-  #site-header nav a {
-    font-size: 1rem;
-    margin-left: 1em;
-    color: var(--text-unfocused, white);
-  }
-
-  #site-header nav a:hover {
-    transition: color 0.5s linear;
-    color: var(--text-color, white);
   }
 
   /* footer */
   #site-footer { 
-    grid-area: 9 / 1 / 11 / 2;
+    grid-area: 9 / 1 / 10 / 2;
     bottom: 0;
     font-size: 1rem;
   }
@@ -249,20 +217,19 @@
 
   #index > div {
     position: absolute;
-    text-align: center;
-    top: 30%;
     width: 100%;
-    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    top: 50%;
   }
 
   #index > div > a{
-    font-size: 1.5rem;
-    display: inline-block;
     color: var(--image-text-unfocused, gray);
     cursor: pointer;
-    padding: 50px;
+    margin-top: 1em;
     text-decoration: none;
-    border: none;
   }
   
   #index > div > a::before, .container > article > a::before, #experience a::before{
@@ -270,7 +237,7 @@
   }
   
   #index > div > a:hover {
-    animation: bounce 1s, glow-no-mode 1s forwards;
+    animation: glow-no-mode 1s forwards;
   }
 
   .container > article > a:hover, #experience a:hover {
