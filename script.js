@@ -140,7 +140,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const savedTheme = localStorage.getItem('theme');
     if(savedTheme) {
         setTheme(savedTheme);
-        document.getElementById('themeToggle').checked = savedTheme === 'light';
     }
 
 })

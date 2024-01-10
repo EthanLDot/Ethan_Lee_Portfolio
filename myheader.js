@@ -33,11 +33,53 @@ class MyHeader extends HTMLElement {
             font-size: 1rem;
             margin-left: 1em;
             color: var(--text-unfocused, white);
+            background-color: var(--header);
         }
         nav a:hover {
             transition: color 0.5s linear;
             color: var(--text-color, white);
-        }        
+        }
+        @media (max-width: 480px) {
+        
+            /* hamburger menu */ 
+            #mainMenuOpen {
+              display:block;
+              font-size:1.8em;
+              line-height:1;
+              border:0;
+            }
+        
+            #mainMenuOpen:after {
+              content:"\u2630";
+              color: var(--text-color, white);
+            }
+        
+            #mainMenuOpen + nav {
+              position:fixed;
+                  top: calc(10vh + 1em);
+                  right: 0;
+                  background-color: transparent;
+            }
+        
+            #mainMenuOpen + nav div {
+              display:flex;
+              flex-direction: column;
+              position:relative;
+              top: -100vh;        
+              transition:top 0.5s;
+            }
+        
+            #mainMenuOpen:focus + nav div,
+            #mainMenuOpen + nav:focus-within div {              
+              top: 0vh;
+            }
+        
+            #mainMenuOpen + nav a {
+                padding: 10px;
+                text-align: center;
+                margin: 0;
+            } 
+        }     
         </style>
         <h1><a href="/">Ethan Lee</a></h1>
         <button type="button" id="mainMenuOpen" tabindex="-1" hidden></button>

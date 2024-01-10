@@ -119,73 +119,9 @@
 
   /* header css */
 
-  my-header {
+  my-header, my-footer {
     background-color: var(--header);
   }
-
-  /* footer */
-  #site-footer { 
-    grid-area: 9 / 1 / 10 / 2;
-    bottom: 0;
-    font-size: 1rem;
-  }
-
-  #site-footer .switch{
-    height: fit-content;
-  }
-
-  .switch input {
-    display: none;
-  }
-
-  #site-footer .slider{
-    position: relative;
-    display: inline-block;
-    width: 48px;
-    height: 27px;
-    background-color: #2b2b2b;
-    border: 1px #fff solid;
-    border-radius: 34px;
-  }
-
-  #site-footer input:checked + .slider{
-    background-color: #e6e6e6;
-    border: 1px #000 solid;
-  }
-
-  #site-footer .slider:before{
-    position: absolute;
-    content: "";
-    height: 19px;
-    width: 19px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    border-radius: 50%;
-  }
-
-  #site-footer input:checked + .slider:before{
-    transform: translateX(19px);
-    background-color: #000;
-  }
-
-  #site-footer, #site-footer * {
-    background-color: var(--header);
-  }
-
-  #site-footer > *{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    height: 50%;
-    box-sizing: border-box;
-  }
-
-  #site-footer > * > * {
-    margin: 0 5px;
-  }
-
   /* section - general */
 
   section {
@@ -515,49 +451,6 @@
 
   @media (max-width: 480px) {
 
-    /* hamburger menu */ 
-    #mainMenuOpen {
-      display:block;
-      font-size:1.8em;
-      line-height:1;
-      border:0;
-    }
-
-    #mainMenuOpen:after {
-      content:"\2630";
-    }
-
-    #mainMenuOpen + nav {
-      position:fixed;
-          top: calc(10vh + 1em);
-          right: 0;
-          background-color: transparent;
-    }
-
-    #mainMenuOpen + nav div {
-      display:flex;
-      flex-direction: column;
-      position:relative;
-      top: -100vh;        
-      transition:top 0.5s;
-    }
-
-    #mainMenuOpen:focus + nav div,
-    #mainMenuOpen + nav:focus-within div {              
-      top: 0vh;
-    }
-
-    #mainMenuOpen + nav a {
-        padding: 10px;
-        text-align: center;
-        margin: 0;
-    } 
-
-    /* footer */
-    #site-footer { 
-      font-size: 0.5rem;
-    }
-
     /* containers */
     .container{
       flex-direction: column;
@@ -604,23 +497,6 @@
 
     #contact-page > hr, #contact-page form{
       width: 100%;
-    }
-
-    #site-footer .slider{
-      width: 30px;
-      height: 17px;
-      border-radius: 17px;
-    }
-  
-    #site-footer .slider:before{
-      height: 13px;
-      width: 13px;
-      left: 2px;
-      bottom: 2px;
-    }
-  
-    #site-footer input:checked + .slider:before{
-      transform: translateX(13px);
     }
 
   }

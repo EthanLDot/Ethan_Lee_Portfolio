@@ -8,11 +8,7 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css" >
     <script src="./myheader.js" type="module"></script>
-    <noscript>
-        <style>
-            #site-footer .switch {display:none;}
-        </style>
-    </noscript>
+    <script src="./myfooter.js" type="module"></script>
 </head>
 <body>
     <div id="site-container">
@@ -31,15 +27,7 @@
                 <a href="portfolio.html">See My Portfolio</a>
             </div>
         </section>
-        <footer id="site-footer">
-                <p>Made with &#9829; by Ethan himself. <a href="https://github.com/EthanLDot/Ethan_Lee_Portfolio">Original Repo</a></p>
-                <label class="switch">
-                    <input type="checkbox" id="themeToggle" onclick="toggleTheme()">
-                    Dark
-                    <span class="slider"></span>
-                    Light
-                </label>
-        </footer>   
+        <my-footer></my-footer>
     </div>
     <script src="script.js"></script>
 </body>
