@@ -95,13 +95,13 @@
     }
   }
   
-  @keyframes glow {
+  @keyframes glow-up {
     100% {
         color: var(--text-focused, white);
     }
   }
 
-  @keyframes glow-no-mode {
+  @keyframes glow-up-no-mode {
     100% {
         color: var(--image-text-focused, white);
     }
@@ -113,7 +113,7 @@
     grid-template-rows: repeat(9, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    max-height: 100vh;
+    height: 100vh;
     overflow-y: hidden;
   }
 
@@ -173,11 +173,11 @@
   }
   
   #index > div > a:hover {
-    animation: glow-no-mode 1s forwards;
+    animation: glow-up-no-mode 1s forwards;
   }
 
   .container > article > a:hover, #experience a:hover {
-    animation: bounce 1s, glow 1s forwards;
+    animation: glow-up 1s forwards;
   }
 
   /* containers - general */
@@ -191,6 +191,7 @@
 
   .container > aside{
     width: 40%;
+    border-radius: 30px;
   }
 
   .container > aside img {
@@ -202,6 +203,7 @@
     text-align: right;
     padding: 10px;
     font-size: .75rem;
+    border-radius: 30px;
   }
   
   .container > article{
@@ -212,6 +214,7 @@
     line-height: 2;
     overflow-y: scroll;
     padding: 0 20px;
+    border-radius: 30px;
   }
 
   .container > article > * {
@@ -225,6 +228,10 @@
     background-color: transparent;
     cursor: pointer;
     text-decoration: none;
+  }
+
+  .container > article > details{
+    line-height: 1.5;
   }
 
   /* about me */
@@ -250,6 +257,13 @@
     align-items: center;
     justify-content: flex-start;
     overflow: hidden;
+    -moz-transition: all 1s;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+  }
+
+  .banner:hover{
+    height: 350px;
   }
 
   .banner > * {
@@ -303,7 +317,21 @@
     border: none;
     margin: 10px 0;
   }
+  #experience summary {
+    cursor: pointer;
+  }
+  #experience summary h3 {
+    font-size: 1.5rem;
+  }
 
+  #experience details hr {
+    margin: 10px;
+  }
+
+  #experience summary strong {  
+    font-size:  2rem;
+    font-weight: bold;
+  }
   /* contact form */
   /* from contact form html */
   #contact-page{
@@ -359,6 +387,19 @@
     height: 50px;
     width: 50px;
     margin: 25px;
+  }
+
+  .contact-icons > a:hover{
+    animation: glow-out 2s forwards;
+  }
+
+  @keyframes glow-out {
+    from {}
+    to{
+      -webkit-box-shadow: 2px 10px 84px 15px rgba(201,201,201,1);
+      -moz-box-shadow: 2px 10px 84px 15px rgba(201,201,201,1);
+      box-shadow: 2px 10px 84px 15px rgba(201,201,201,1);
+    }
   }
 
   #contact-page form{
@@ -478,6 +519,14 @@
     .banner{
       align-items: center;
       justify-content: center;
+    }
+
+    @keyframes glow-in {
+      from {}
+      to{
+        -webkit-box-shadow: inset 2px 10px 84px 15px rgba(201,201,201,1);
+        -moz-box-shadow: inset 2px 10px 84px 15px rgba(201,201,201,1);
+        box-shadow: inset 2px 10px 84px 15px rgba(201,201,201,1);      }
     }
 
     .banner > * {
