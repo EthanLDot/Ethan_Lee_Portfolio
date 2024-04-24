@@ -32,6 +32,14 @@ function toggleTheme() {
     setTheme(newTheme);
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    const savedTheme = localStorage.getItem('theme');
+    if(savedTheme) {
+        setTheme(savedTheme);
+    }
+})
+
+// OLD CODE FROM CSE 134B - FOR ARCHIVAL/DEMONSTRATION PURPOSES ONLY WILL NOT WORK
 // const form = document.querySelector("form");
 // const nameField = document.getElementById("name");
 // const nameError = document.querySelector("#name ~ span.error");
@@ -135,14 +143,6 @@ function toggleTheme() {
 // backgroundField.addEventListener("input", (event) => {
 //   countCharacters(backgroundField, backgroundField.maxLength);
 // });
-
-document.addEventListener('DOMContentLoaded', function() {
-    const savedTheme = localStorage.getItem('theme');
-    if(savedTheme) {
-        setTheme(savedTheme);
-    }
-
-})
 
 // document.getElementById('contact-form').addEventListener('submit', function (event) {
 //     // Create a hidden input field

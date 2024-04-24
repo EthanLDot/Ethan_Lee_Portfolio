@@ -207,7 +207,7 @@
 
   .container {
     display: flex;
-    width: 80%;
+    width: 100%;
     border: 1px solid var(--text-color); 
     border-radius: 10px;
     padding: 10px;
@@ -219,7 +219,8 @@
   }
 
   .container > aside img {
-    height: 60%;
+    height: 150px;
+    object-fit: cover;
     width: calc(100% - 5px);
     margin: 5px;
   }
@@ -332,9 +333,24 @@
     flex-direction: column;
   }
 
+  #experience .container {
+    margin: 10px 0;
+  }
+
+  #experience > div {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    width: 80%;
+  }
+
   #experience .container > article{
     line-height: 1.25;
     overflow-y: hidden;
+  }
+
+  #experience .container a {
+    text-decoration: none;
   }
 
   #experience a {
@@ -343,9 +359,8 @@
     background-color: transparent;
     cursor: pointer;
     text-decoration: none;
-    border: none;
-    margin: 10px 0;
   }
+
   #experience summary {
     cursor: pointer;
   }
