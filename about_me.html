@@ -7,31 +7,17 @@
     <title>About Me | Ethan Lee</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css" >
-    <noscript>
-        <style>
-            #site-footer .switch {display:none;}
-        </style>
-    </noscript>
+    <script src="./myheader.js" type="module"></script>
+    <script src="./myfooter.js" type="module"></script>
    </head>
 <body>
     <div id="site-container">
-        <header id="site-header">
-            <h1><a href="/">Ethan Lee</a></h1>
-            <button type="button" id="mainMenuOpen" tabindex="-1" hidden></button>
-            <nav>
-                <div>
-                    <a href="/about_me.html">About Me</a>
-                    <a href="/portfolio.html">Portfolio</a>
-                    <a href="/contact_form.html">Contact</a>
-                </div>
-            </nav>
-        </header>
+        <my-header></my-header>
         <section id="about-me">
             <h2>About Me</h2>
             <div class="container">
                 <aside>
-                    <figure>
-                        <picture>
+                        <picture id="portrait">
                             <source srcset="assets/nashville_potrait.avif" type="image/avif" media="(min-width: 480px)">
                             <source srcset="assets/nashville_potrait.webp" type="image/webp" media="(min-width: 480px)">
                             <source srcset="assets/nashville_potrait_lowres.webp" type="image/webp" media="(max-width: 480px)">
@@ -39,11 +25,9 @@
                             <img src="assets/nashville_potrait_lowres.jpg" alt="Ethan Lee's Nashville portrait" width="100" height="300">
                             <!-- source: personal image -->
                         </picture>
-                        <figcaption>Me during a recent trip to Nashville, Tennessee</figcaption>
-                    </figure>
                 </aside>
                 <article>
-                    <h2>I am a:</h2>
+                    <p>I am a:</p>
                     <ul>
                         <li>2000s kid</li>
                         <li>Computer science student at University of California, San Diego</li>
@@ -61,15 +45,7 @@
                 </article>
             </div>
         </section>
-        <footer id="site-footer">
-            <p>Made with &#9829; by Ethan himself. <a href="https://github.com/EthanLDot/Ethan_Lee_Portfolio">Original Repo</a></p>
-            <label class="switch">
-                <input type="checkbox" id="themeToggle" onclick="toggleTheme()">
-                Dark
-                <span class="slider"></span>
-                Light
-            </label>
-        </footer>   
+        <my-footer></my-footer> 
     </div>
     <script src="script.js"></script>  
 </body>

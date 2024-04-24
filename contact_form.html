@@ -7,31 +7,18 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <meta name="description" content="Reach out to Ethan Lee, based in California, USA.">
     <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css" >
-    <noscript>
-        <style>
-            #site-footer .switch {display:none;}
-        </style>
-    </noscript>
+    <script src="./myheader.js" type="module"></script>
+    <script src="./myfooter.js" type="module"></script>
 </head>
 <body>
     <div id="site-container">
-        <header id="site-header">
-            <h1><a href="/">Ethan Lee</a></h1>
-            <button type="button" id="mainMenuOpen" tabindex="-1" hidden></button>
-            <nav>
-                <div>
-                    <a href="/about_me.html">About Me</a>
-                    <a href="/portfolio.html">Portfolio</a>
-                    <a href="/contact_form.html">Contact</a>
-                </div>
-            </nav>
-        </header>
+        <my-header></my-header>
         <section id="contact-page">
             <h2>Reach Out to Me!</h2>
             <hr>
             <article>
                 <h3>Emails/Socials</h3>
-                <p>ethanlee2337@gmail.com</p>
+                <a href="mailto:ethanlee2337@gmail.com"><p>ethanlee2337@gmail.com</p></a>
                 <div class="contact-icons">
                     <a href="https://www.linkedin.com/in/real-ethan-lee/">
                         <img src="/assets/in-white.png" alt="LinkedIn" class="icon">
@@ -41,80 +28,9 @@
                     </a>
                 </div> 
             </article>
-            <hr>
-            <article>
-                <h3>Contact Form</h3>
-                <!-- <p>
-                    Required fields are followed by
-                    <strong><span aria-label="required">*</span></strong>.
-                </p> -->
-        
-                <form action="https://httpbin.org/post" method="POST" id="contact-form">
-                    <label for="name">Name <span aria-label="required">*</span>
-                        <input type="text" id="name" name="name" pattern="^[\p{L} ]+$" required>
-                        <span class="error" aria-live="polite"></span>
-                    </label>
-                    <label for="email">Email Address <span aria-label="required">*</span>
-                        <input type="email" id="email" name="email" required>
-                        <span class="error" aria-live="polite"></span>
-                    </label>
-                    <fieldset>
-                        <legend>Who Are You? </legend>
-                        <p>
-                            <input type="radio" name="role" id="grade_school" value="grade_school">
-                            <label for="grade_school">Grade School Student</label>
-                        </p>
-                        <p>
-                            <input type="radio" name="role" id="college" value="college">
-                            <label for="college">College Student</label>
-                        </p>
-                        <p>
-                            <input type="radio" name="role" id="professional" value="professional">
-                            <label for="professional">Working Professional</label>
-                        </p>
-                    </fieldset>
-                    <label for="background-info">What Else Should I Know About You?
-                        <textarea id="background-info" name="background-info" rows="2" cols="50" maxlength="100"></textarea>
-                        <span class="char_count">100/100</span>
-                    </label>
-                    <label for="comments">What's Up? <span aria-label="required">*</span>
-                        <textarea id="comments" name="comments" rows="4" cols="50"  minlength = "30" maxlength = "400" required></textarea>
-                        <span class="char_count">400/400</span>
-                        <span class="error" aria-live="polite"></span>
-                    </label>
-                    <fieldset>
-                        <legend>How Quickly Do You Need a Reply?</legend>
-                        <p>
-                            <input type="radio" name="urgency" id="urgent" value="urgent">
-                            <label for="urgent">Urgent</label>
-                        </p>
-                        <p>
-                            <input type="radio" name="urgency" id="not_urgent" value="not_urgent">
-                            <label for="not_urgent">Not Urgent</label>
-                        </p>
-                        <p>
-                            <input type="radio" name="urgency" id="no_response" value="no_response">
-                            <label for="no_response">No Need For Reply</label>
-                        </p>
-                    </fieldset>
-                    <p>
-                        <button type="submit">Submit</button>
-                    </p>
-                    <input type="hidden" id="possible_bot" name="possible_bot" value="true" />
-                    <output name="error"></output>
-                    <output name="information" for="a b"></output>
-                </form>
-            </article>        
+            <hr>  
         </section>
-        <footer id="site-footer">
-            <p>Made with &#9829; by Ethan himself. <a href="https://github.com/EthanLDot/Ethan_Lee_Portfolio">Original Repo</a></p>
-            <label class="switch">
-                <input type="checkbox" id="themeToggle" onclick="toggleTheme()">
-                Dark
-                <span class="slider"></span>
-                Light
-            </label>
-        </footer>   
+        <my-footer></my-footer> 
     </div>
     <script src="script.js"></script>
     <script src="forms.js"></script>
