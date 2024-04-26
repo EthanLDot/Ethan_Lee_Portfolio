@@ -11,46 +11,26 @@
 </head>
 <body>
     <div id="site-container">
-        <my-header></my-header>
+        <my-header>
+            <noscript>
+                <h1>Ethan Lee</h1>
+                <p>Note: it is recommended that you enable javascript.</p>
+                <nav>
+                        <a href="/">Go Home</a>
+                        <a href="/about_me.html">About Me</a>
+                        <a href="/portfolio.html">Portfolio</a>
+                        <a href="/contact_form.html">Contact</a>
+                </nav>
+            </noscript>
+        </my-header>
         <section id="experience">
             <h2>Projects</h2>
-            <div class="container">
-                <aside>
-                    <figure>
-                        <picture>
-                            <source srcset="../assets/portfolio_profile.avif" type="image/avif" media="(min-width: 480px)">
-                            <source srcset="../assets/portfolio_profile.webp" type="image/webp" media="(min-width: 480px)">
-                            <source srcset="../assets/portfolio_profile_lowres.webp" type="image/webp" media="(max-width: 480px)">
-                            <source srcset="../assets/portfolio_profile.jpg" type="images/jpeg" media="(min-width: 480px)">
-                            <img class="experience-img" src="../assets/portfolio_profile_lowres.jpg" alt="profile picture of Ethan Lee" width="300" height="100">
-                            <!-- source: personal image -->
-                        </picture>
-                    </figure>
-                </aside>
-                <article>
-                    <details>
-                        <summary>
-                            <h3>Personal Portfolio<br>September 2023 - Present</h3>
-                        </summary>
-                        <div>
-                            <h4>Key Skills:</h4>
-                            <ul>
-                               <li>HTML/CSS/JS</li>
-                               <li>React</li>
-                               <li>Figma</li>
-                            </ul>
-                       </div>
-                        <p>I initially took an unorthodox, design-based approach by wireframing and building the site's user interface using Figma, and then using the Locofy AI-based tool to convert the existing interface into React.</p><br>
-                        <p>Locofy specializes in using AI to automate conversion of Figma designs into working front-end code, promising faster development at the expense of some control over the page structure. You can learn more <a href="https://www.locofy.ai/">here.</a></p><br>
-                        While there was not a lot of tweaking involved to get the interface working the way I expected, I realized that in the context of a portfolio, where the majority of content would be static, this was an overkill approach that added unneeded complexity and website's performance, readability, and SEO.
-                        As part of a course on web client languages, I was tasked with rebuilding the website with this knowledge in mind. I am using HTML, CSS, and Javascript (again), but with a greater focus on optimizing performance and accessibility through semantically correct HTML and reducing asset sizes.
-                    </details>
-                </article>
-            </div>
+            <div><noscript>Unfortunately, to see this content you will need to enable Javascript on your browser.</noscript></div>
             <a href="../portfolio.html">Back</a>
         </section>
         <my-footer></my-footer>
     </div>
     <script src="../script.js"></script>
+    <script src="../get_projects.js"></script>
 </body>
 </html>

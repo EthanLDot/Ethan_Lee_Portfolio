@@ -271,6 +271,7 @@
 
   #about-me .container {
     height: 75%;
+    width: 80%;
   }
 
   #about-me #portrait source, img{
@@ -375,6 +376,10 @@
   #experience summary strong {  
     font-size:  2rem;
     font-weight: bold;
+  }
+
+  #experience summary strong:hover {  
+    text-decoration: underline;
   }
   /* contact form */
   /* from contact form html */
