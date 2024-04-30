@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         imgSource.alt = `placeholder alt text`;
                         //get html for experiences only
                         var templateText = templates.content.querySelector('#project-text').cloneNode(true).content;
-                        templateText.getElementById('project-name').innerHTML = `<a href=${entry.link}><strong>${entry.name}</strong></a>`;
+                        templateText.getElementById('project-name').innerHTML = `<a href=${entry.link} target='_blank' rel='noopener noreferrer'><strong>${entry.name}</strong></a>`;
                         templateText.getElementById('date').innerHTML = `${entry.date}`; 
                         var skillsList = templateText.getElementById('skills-list');
                         entry.skills.forEach(function(skill, idx) {

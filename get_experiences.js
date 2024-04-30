@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         imgSource.alt = `${entry.imageAlt}`;
                         //get html for experiences only
                         var templateText = templates.content.querySelector('#experience-text').cloneNode(true).content;
-                        templateText.getElementById('experience-name').innerHTML = `<a href=${entry.link}><strong>${entry.name}</strong></a>`;
+                        templateText.getElementById('experience-name').innerHTML = `<a href=${entry.link} target='_blank' rel='noopener noreferrer'><strong>${entry.name}</strong></a>`;
                         templateText.getElementById('location').innerHTML = `${entry.location}`; 
                         templateText.getElementById('date').innerHTML = `${entry.startDate} - ${entry.endDate}`; 
                         var skillsList = templateText.getElementById('skills-list');

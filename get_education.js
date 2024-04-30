@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                         //get html for education
                         var templateText = templates.content.querySelector('#education-text').cloneNode(true).content;
-                        templateText.getElementById('education-name').innerHTML = `<a href=${entry.link}><strong>${entry.name}</strong></a>`;
+                        templateText.getElementById('education-name').innerHTML = `<a href=${entry.link} target='_blank' rel='noopener noreferrer'><strong>${entry.name}</strong></a>`;
                         templateText.getElementById('location').innerHTML = `${entry.location}`; 
                         templateText.getElementById('date').innerHTML = `${entry.startDate} - ${entry.endDate}`; 
                         var classesList = templateText.getElementById('classes-list');
