@@ -5,7 +5,11 @@
     <template id="entry-template">
         <div class="container" id="entry-container">
             <aside id="entry-image">
-                <img src="/assets/placeholder.jpg" alt="Placeholder">
+                <picture>
+                    <source srcset="/assets/placeholder.jpg" type="image/avif">
+                    <source srcset="/assets/placeholder.jpg" type="image/webp">
+                    <img src="/assets/placeholder.jpg" alt="Placeholder">
+                  </picture>
             </aside>
             <article id="entry-details">
                 

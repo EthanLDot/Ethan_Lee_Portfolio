@@ -1,3 +1,4 @@
+// const url = '/data/education.json';
 const url = 'https://pub-905e1930f62c4043a73e59e819502421.r2.dev/education.json';
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -26,6 +27,14 @@ document.addEventListener('DOMContentLoaded', function() {
                         console.log(entry);
                         //get template container
                         var templateContainer = templates.content.querySelector('#entry-template').cloneNode(true).content;
+                        //add images
+                        var webpSource = (templateContainer.querySelector('#entry-image source[type="image/webp"]'));
+                        var avifSource = (templateContainer.querySelector('#entry-image source[type="image/avif"]'));
+                        var imgSource = (templateContainer.querySelector('#entry-image img'));
+                        webpSource.srcset = `/assets/${entry.imageUrl}.webp`
+                        avifSource.srcset = `/assets/${entry.imageUrl}.avif`
+                        imgSource.srcset = `/assets/${entry.imageUrl}.jpg`
+                        imgSource.alt = `${entry.imageAlt}`;
 
                         //get html for education
                         var templateText = templates.content.querySelector('#education-text').cloneNode(true).content;

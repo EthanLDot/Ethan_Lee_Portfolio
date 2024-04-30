@@ -1,3 +1,4 @@
+// const url = '/data/project.json'
 const url = 'https://pub-905e1930f62c4043a73e59e819502421.r2.dev/project.json';
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -26,7 +27,14 @@ document.addEventListener('DOMContentLoaded', function() {
                         console.log(entry);
                         //get template container
                         var templateContainer = templates.content.querySelector('#entry-template').cloneNode(true).content;
-
+                        //add images
+                        var webpSource = (templateContainer.querySelector('#entry-image source[type="image/webp"]'));
+                        var avifSource = (templateContainer.querySelector('#entry-image source[type="image/avif"]'));
+                        var imgSource = (templateContainer.querySelector('#entry-image img'));
+                        webpSource.srcset = `/assets/${entry.imageUrl}.webp`
+                        avifSource.srcset = `/assets/${entry.imageUrl}.avif`
+                        imgSource.srcset = `/assets/${entry.imageUrl}.jpg`
+                        imgSource.alt = `placeholder alt text`;
                         //get html for experiences only
                         var templateText = templates.content.querySelector('#project-text').cloneNode(true).content;
                         templateText.getElementById('project-name').innerHTML = `<a href=${entry.link}><strong>${entry.name}</strong></a>`;
