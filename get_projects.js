@@ -1,4 +1,3 @@
-// const url = '/data/project.json'
 const url = 'https://pub-905e1930f62c4043a73e59e819502421.r2.dev/project.json';
 
 document.addEventListener('DOMContentLoaded', function() {

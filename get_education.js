@@ -1,4 +1,3 @@
-// const url = '/data/education.json';
 const url = 'https://pub-905e1930f62c4043a73e59e819502421.r2.dev/education.json';
 
 document.addEventListener('DOMContentLoaded', function() {
