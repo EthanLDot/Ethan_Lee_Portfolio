@@ -1,2 +1,3 @@
-# Ethan Lee Portfolio (for CSE 134B)
-This page is built for a CSE 134b project and is not related to the React-based portfolio repository that may have been linked on my resume.
+# Ethan Lee Portfolio (now a public site!)
+[URL](https://ethan-lee-portfolio.pages.dev/) or https://ethan-lee-portfolio.pages.dev/
+
