@@ -9,6 +9,7 @@ class MyFooter extends HTMLElement {
         <style>
         .switch{
             height: fit-content;
+            display: flex;
         }
         .switch input {
             display: none;
@@ -16,7 +17,7 @@ class MyFooter extends HTMLElement {
         .slider{
             position: relative;
             display: inline-block;
-            width: 2.6rem;
+            width: 2rem;
             height: 1.3rem;
             background-color: #2b2b2b;
             border: 1px #fff solid;
@@ -27,13 +28,13 @@ class MyFooter extends HTMLElement {
             content: "";
             height: calc(1rem);
             width: calc(1rem);
-            left: 4px;
-            bottom: 3px;
+            top: 10%;
+            left: 0.1rem;
             background-color: white;
             border-radius: 50%;
         }
         input:checked + .slider:before{
-            transform: translateX(1rem);
+            transform: translateX(0.8rem);
         }
         input:checked + .slider{
             border: 1px #fff solid;
@@ -55,7 +56,7 @@ class MyFooter extends HTMLElement {
                 font-size: 0.75rem;
             }
             .slider{
-                width: 2rem;
+                width: 1.7rem;
                 height: 1rem;
                 border-radius: 1rem;
             }

@@ -548,6 +548,10 @@
       width: 95%;
     }
 
+    .container > aside {
+      width: 100%;
+    }
+
     .container > aside figure{
       text-align: center;
       padding: 0px;
