@@ -32,12 +32,30 @@ function toggleTheme() {
     setTheme(newTheme);
 }
 
+
+function submitContactForm() {
+    tempAlert("Submitting, please wait as the form will ask you to complete CAPTCHA", 5000);
+}
+
+// credit https://stackoverflow.com/questions/15466802/how-can-i-auto-hide-alert-box-after-it-showing-it
+function tempAlert(msg,duration)
+{
+ var el = document.createElement("div");
+ el.className="popup";
+ el.innerHTML = msg;
+ setTimeout(function(){
+  el.parentNode.removeChild(el);
+ },duration);
+ document.body.appendChild(el);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const savedTheme = localStorage.getItem('theme');
     if(savedTheme) {
         setTheme(savedTheme);
     }
 })
+
 
 // OLD CODE FROM CSE 134B - FOR ARCHIVAL/DEMONSTRATION PURPOSES ONLY WILL NOT WORK
 // const form = document.querySelector("form");

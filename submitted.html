@@ -25,7 +25,10 @@
             </noscript>
         </my-header>
         <section id="contact-page">
-            <h2>Reach Out to Me!</h2>
+            <h2>Form Submitted!</h2>
+            <article>
+                <a href="/">Go Home</a>
+            </article>
             <hr>
             <article>
                 <h3>Emails/Socials</h3>
@@ -39,28 +42,6 @@
                     </a>
                 </div> 
             </article>
-            <hr>
-            <article>
-                <h3>Or Contact Me Through This Form</h3>
-                <form id="contact-form" onsubmit="submitContactForm()" action="https://formsubmit.co/ethan@realethanlee.dev" method="POST">
-                    <label for="name">Name<span aria-label="required">*</span>
-                    </label>
-                    <input type="text" id="name" name="name" placeholder="ex: Joe Bob" pattern="^[\p{L} ]+$" required>
-                    <label for="email">Email<span aria-label="required">*</span>
-                    </label>
-                    <input type="email" id="email" name="email" placeholder = "ex: joebob@email.net" required>
-                    <label for="name">Subject<span aria-label="required">*</span>
-                    </label>
-                    <input type="text" id="subject" name="subject" placeholder="ex: Job Offer!" required>       
-                    <label for="comments">Your Comments<span aria-label="required">*</span>
-                    </label>
-                    <textarea id="comments" name="comments" placeholder="What's up?" rows="4" cols="50"  required></textarea>
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_next" value="https://realethanlee.dev/submitted">
-                    <button type="submit">Submit</button>
-                </form>
-            </article>
-            <hr>  
         </section>
         <my-footer></my-footer> 
     </div>
